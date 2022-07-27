@@ -1,0 +1,10 @@
+{
+  "name": "trinity",
+  "version": "1.0.0",
+  "description": "Public Demandjump React Components and UIKit",
+  "main": "index.tsx",
+  "repository": "https://github.com/DemandJump/trinity.git",
+  "author": "Bryan Overbey <bryanmorganoverbey@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.2"
+}
