@@ -38,19 +38,28 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
   //   // },
   // }));
   const htmlId = rest?.id || uuid();
+  const rootStyle = {
+        marginTop: "8px",
+        // color: theme.palette.metalgrey.main,
+        // fontSize: 16,
+        // fontWeight: 400,
+        // width: "auto",
+        padding: "8px 6px",
+        // "&:focus": {
+        //   borderColor: theme.palette.primary.main,
+        // },
+        // border: `1px solid`,
+        // borderRadius: "3px",
+        // // boxSizing: "border-box",
+        height: "48px",
+  };
   return (
     <ThemeProvider theme={theme}>
-      <InputLabel
-        style={{ color: theme.palette.metalgrey.main }}
-        shrink
-        htmlFor={htmlId}
-      >
-        {`${labelText}`}
+      <InputLabel style={{ color: theme.palette.metalgrey.main }} shrink htmlFor={htmlId}>
+        {labelText}
       </InputLabel>
       <MUITextField
-        sx={{
-          marginTop: "16px",
-        }}
+        style={rootStyle}
         id={htmlId}
         variant="outlined"
         {...rest}
@@ -62,7 +71,7 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
         value={field.value}
         error={!!metadata.error}
         helperText={metadata.error || helpMessage}
-        FormHelperTextProps={{ style: { color: theme.palette.metalgrey.main } }}
+        FormHelperTextProps={{ style: { color: metadata.error? theme.palette.error.main : theme.palette.metalgrey.main } }}
         onBlur={() => {
           if (!metadata.touched) {
             helpers.setTouched(true);

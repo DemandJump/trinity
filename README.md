@@ -4,6 +4,25 @@
 
 Public Demandjump React Component Library and UIKit based on Material Design with MaterialUI.
 
+## Installation Instructions
+
+If you are using npm, you can run the following command:
+     npm install @demandjump/trinity
+
+For yarn users:
+     yarn add @demandjump/trinity
+
+Then import the components like so:
+
+     import { TextField } from '@demandjump/trinity';
+
+     ...
+
+     <TextField name="myFieldName" id="myFieldId">
+
+     ...
+
+See the storybook for more information about props
 ## Storybook
 
 See the components live at [Our Storybook](https://demandjump.github.io/trinity/)

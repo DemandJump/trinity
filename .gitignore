@@ -1,4 +1,5 @@
 node_modules
+.DS_Store
 
 
 # yarn 3 stuff to ignore. (We are using zero-installs)
