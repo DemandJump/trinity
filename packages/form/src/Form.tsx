@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
-import { FormControl as MUIForm } from '@material-ui/core';
+import { FormControl as MUIForm } from '@mui/material';
 import { Formik, Form as FForm, useFormikContext } from 'formik';
 
 const useFormikFocusFirstInvalidField = (id, focusInvalidField, invalidInputSelectors) => {
@@ -57,9 +57,19 @@ const Form = ({
       innerRef={innerRef}
     >
       {(props) => (
-        <FocusableForm data-testid="form-container" tag={FForm} id={formId} focusProps={focusProps} {...rest}>
-          {typeof children === 'function' ? children(props) : children}
-        </FocusableForm>
+        <>
+          {console.log(props.touched)}
+          <FocusableForm
+            data-testid="form-container"
+            tag={FForm}
+            id={formId}
+            focusProps={focusProps}
+            {...rest}
+            formikProps={props}
+          >
+            {typeof children === "function" ? children(props) : children}
+          </FocusableForm>
+        </>
       )}
     </Formik>
   );

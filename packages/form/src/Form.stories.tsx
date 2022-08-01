@@ -8,6 +8,7 @@ import {
 	Form,
   TextField,
 } from '.';
+import { string } from 'yup/lib/locale';
 
 
 export default {
@@ -18,30 +19,48 @@ export default {
     },
   },
   args: {
-    required: false,
+		required: false,
+		initialValue: false,
+		helpMessage: false,
+		disabled: false,
+		labelText: true,
   },
 } as Meta;
 
-type FormStoryProps = { required: boolean };
+type FormStoryProps = { required: boolean, initialValue: boolean, helpMessage: boolean, disabled: boolean, labelText: boolean};
 
-export const Default: Story<FormStoryProps> = ({ required }) => {
+export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMessage, disabled, labelText }) => {
 
-  return (
-    <Form
-      onSubmit={() => {
-        console.log('submitted');
-      }}
-      initialValues={{
-        myInput: "Initial value",
-      }}
-      validationSchema={yup.object().shape({
-        myInput: yup.string().min(2, "That's too short").max(6, "That's too long").required("This field is required")
-      })}
-    >
-      <h2>Form</h2>
-      <br />
-      <TextField name="myInput" data-testid="hello-input" errorMessage="That's an error, bud!"/>
-    </Form>
+	return (
+    <>
+      <h2>TextField</h2>
+      <Form
+        onSubmit={() => {
+          console.log("submitted");
+        }}
+        initialValues={{
+          myInput: initialValue ? "Example Initial Value" : undefined,
+        }}
+        validationSchema={yup.object().shape({
+          myInput: required
+            ? yup
+                .string()
+                .min(2, "That's too short")
+                .max(6, "That's too long")
+                .required("This field is required")
+            : yup.string().min(2, "That's too short").max(6, "That's too long"),
+        })}
+      >
+				<TextField
+					name="myInput"
+					data-testid="hello-input"
+					label="Placeholder label"
+					helpMessage={helpMessage ? "Example Help Message" : ""}
+					disabled={disabled}
+					labelText={labelText ? "My Label" : ""}
+        />
+      </Form>
+    </>
   );
 };
 Default.storyName = 'TextField';
