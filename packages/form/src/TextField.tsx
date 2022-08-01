@@ -38,6 +38,11 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
   //   // },
   // }));
   const htmlId = rest?.id || uuid();
+  const inputLabelStyle = {
+    color: metadata.error
+      ? theme.palette.error.main
+      : theme.palette.metalgrey.main,
+  };
   const rootStyle = {
         marginTop: "8px",
         // color: theme.palette.metalgrey.main,
@@ -45,17 +50,18 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
         // fontWeight: 400,
         // width: "auto",
         padding: "8px 6px",
-        // "&:focus": {
-        //   borderColor: theme.palette.primary.main,
-        // },
+        "&:focus": {
+          borderColor: theme.palette.primary.main,
+        },
         // border: `1px solid`,
         // borderRadius: "3px",
         // // boxSizing: "border-box",
+        color: metadata.error? theme.palette.error.main : "#56627C",
         height: "48px",
   };
   return (
     <ThemeProvider theme={theme}>
-      <InputLabel style={{ color: theme.palette.metalgrey.main }} shrink htmlFor={htmlId}>
+      <InputLabel style={inputLabelStyle} shrink htmlFor={htmlId}>
         {labelText}
       </InputLabel>
       <MUITextField
@@ -63,7 +69,7 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
         id={htmlId}
         variant="outlined"
         {...rest}
-        InputLabelProps={{ shrink: false }}
+        InputLabelProps={{ shrink: false, style: { color: "#56627C" } }}
         label={!metadata.touched && !field.value && label}
         className={className}
         name={name}
@@ -71,7 +77,16 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
         value={field.value}
         error={!!metadata.error}
         helperText={metadata.error || helpMessage}
-        FormHelperTextProps={{ style: { color: metadata.error? theme.palette.error.main : theme.palette.metalgrey.main } }}
+        InputProps={{
+          style: { color: metadata.error ? theme.palette.error.main : "#56627C", }
+        }}
+        FormHelperTextProps={{
+          style: {
+            color: metadata.error
+              ? theme.palette.error.main
+              : theme.palette.metalgrey.main,
+          },
+        }}
         onBlur={() => {
           if (!metadata.touched) {
             helpers.setTouched(true);

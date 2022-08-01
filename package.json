@@ -53,6 +53,7 @@
     "@commitlint/config-conventional": "^16.2.4",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@fontsource/source-sans-pro": "^4.5.10",
     "@mui/material": "^5.9.2",
     "@storybook/addon-a11y": "^6.5.4",
     "@storybook/addon-essentials": "^6.5.4",

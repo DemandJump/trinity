@@ -1832,6 +1832,7 @@ __metadata:
     "@commitlint/config-conventional": ^16.2.4
     "@emotion/react": ^11.10.0
     "@emotion/styled": ^11.10.0
+    "@fontsource/source-sans-pro": ^4.5.10
     "@mdx-js/react": ^1.6.22
     "@mui/material": ^5.9.2
     "@storybook/addon-a11y": ^6.5.4
@@ -2108,6 +2109,13 @@ __metadata:
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
   checksum: 03a7704150b868c318aab6a94d87a33d30dc2ec579d27374575014f06237ba1370ae11178db772f985ef680d469dc237e7b16a1c5d8edaaeb8c3733e7a95a6d3
+  languageName: node
+  linkType: hard
+
+"@fontsource/source-sans-pro@npm:^4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/source-sans-pro@npm:4.5.10"
+  checksum: d0b786cdff56e2b9f0dbb557473342ac95bc2021eea57097a29244936554a1f452b1ba5b053f11f2f3bcf58ba77823ac1e2a3ff8aba8c4618026a131a025a86d
   languageName: node
   linkType: hard
 
