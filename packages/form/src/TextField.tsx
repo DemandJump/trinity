@@ -41,9 +41,11 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
         id={htmlId}
         variant="outlined"
         {...rest}
-        InputLabelProps={{ shrink: false, style: { color: "#56627C" , padding: "0px 5px"} }}
+        InputLabelProps={{
+          shrink: false,
+          style: { color: "#56627C", padding: "0px 5px" },
+        }}
         label={!metadata.touched && !field.value && label}
-        
         className={className}
         name={name}
         required={required}
@@ -51,7 +53,14 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
         error={!!metadata.error}
         helperText={metadata.error || helpMessage}
         InputProps={{
-          style: { color: metadata.error ? theme.palette.error.main : "#56627C" }
+          style: {
+            color: metadata.error ? theme.palette.error.main : "#56627C",
+          },
+        }}
+        inputProps={{
+          style: {
+            padding: "8px 16px",
+          },
         }}
         FormHelperTextProps={{
           style: {
