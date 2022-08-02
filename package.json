@@ -1,6 +1,6 @@
 {
   "name": "@demandjump/trinity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Public Demandjump React Components and UIKit",
   "main": "index.tsx",
   "repository": {
