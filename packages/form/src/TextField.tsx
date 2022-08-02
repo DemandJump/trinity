@@ -13,10 +13,29 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
 
 
   const htmlId = rest?.id || uuid();
-  const inputLabelStyle = {
+  const disabledHelperTextStyle = {
+    color: "#9E9E9E",
+  }
+  const helperTextStyle = {
     color: metadata.error
       ? theme.palette.error.main
       : theme.palette.metalgrey.main,
+  };
+  const disabledInputLabelStyle = {
+    color: "#9E9E9E",
+  };
+  const inputLabelStyle = {
+    color: metadata.error
+      ? theme.palette.error.main
+      : theme.palette.metalgrey.main
+  };
+  const disabledPlaceholderStyle = {
+    color: "#9E9E9E",
+    padding: "0px 5px",
+  };
+  const placeholderStyle = {
+    color: "#56627C",
+    padding: "0px 5px"
   };
   const rootStyle = {
         marginTop: "8px",
@@ -33,7 +52,7 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
   };
   return (
     <ThemeProvider theme={theme}>
-      <InputLabel style={inputLabelStyle} shrink htmlFor={htmlId}>
+      <InputLabel  style={rest.disabled ? disabledInputLabelStyle : inputLabelStyle} shrink htmlFor={htmlId}>
         {labelText}
       </InputLabel>
       <MUITextField
@@ -43,7 +62,7 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
         {...rest}
         InputLabelProps={{
           shrink: false,
-          style: { color: "#56627C", padding: "0px 5px" },
+          style: rest.disabled ? disabledPlaceholderStyle : placeholderStyle,
         }}
         label={!metadata.touched && !field.value && label}
         className={className}
@@ -63,11 +82,7 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
           },
         }}
         FormHelperTextProps={{
-          style: {
-            color: metadata.error
-              ? theme.palette.error.main
-              : theme.palette.metalgrey.main,
-          },
+          style: rest.disabled ? disabledHelperTextStyle : helperTextStyle,
         }}
         onBlur={() => {
           if (!metadata.touched) {

@@ -19,6 +19,11 @@ const theme = createTheme({
         main: '#373F50',
       },
     }),
+    disabled: defaultTheme.palette.augmentColor({
+      color: {
+        main: "#909BB3"
+      }
+    }),
     // augmentColor is a step that Material-UI automatically does for the standard palette colors.
     // tertiary: defaultTheme.palette.augmentColor({
     //   color: { main: lime[500] },
