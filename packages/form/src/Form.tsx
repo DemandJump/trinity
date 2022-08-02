@@ -1,8 +1,7 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import { v4 as uuid } from 'uuid';
-import { FormControl as MUIForm } from '@mui/material';
-import { Formik, Form as FForm, useFormikContext } from 'formik';
+import * as React from "react";
+import PropTypes from "prop-types";
+import { FormControl as MUIForm } from "@mui/material";
+import { Formik, Form as FForm, useFormikContext } from "formik";
 
 const useFormikFocusFirstInvalidField = (id, focusInvalidField, invalidInputSelectors) => {
   const formik = useFormikContext();
@@ -40,7 +39,7 @@ const Form = ({
   children,
   ...rest
 }) => {
-  const formId = id || uuid();
+  const formId = id;
   const focusProps = [(id = formId), focusInvalidField, invalidInputSelectors];
 
   return (
@@ -58,8 +57,7 @@ const Form = ({
     >
       {(props) => (
         <>
-          {console.log(props.touched)}
-          <FocusableForm
+           <FocusableForm
             data-testid="form-container"
             tag={FForm}
             id={formId}

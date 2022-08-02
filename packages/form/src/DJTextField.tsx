@@ -3,16 +3,15 @@ import PropTypes from 'prop-types';
 import { ThemeProvider} from "@mui/material/styles";
 import { TextField as MUITextField, InputLabel } from '@mui/material';
 import { useField } from 'formik';
-import { v4 as uuid } from "uuid";
 import theme from '../../theme/src';
 
-const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, validate, name, required, label, helpMessage, formikProps,  ...rest }) => {
+const DJTextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, validate, name, required, label, helpMessage, formikProps,  ...rest }) => {
   const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] = useField(
     name
   );
 
 
-  const htmlId = rest?.id || uuid();
+  const htmlId = rest?.id;
   const disabledHelperTextStyle = {
     color: "#9E9E9E",
   }
@@ -103,7 +102,7 @@ const TextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, va
   );
 };
 
-TextField.propTypes = {
+DJTextField.propTypes = {
   className: PropTypes.string,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
@@ -111,8 +110,8 @@ TextField.propTypes = {
   validate: PropTypes.func,
 };
 
-TextField.defaultProps = {
+DJTextField.defaultProps = {
   required: false,
 };
 
-export default TextField;
+export default DJTextField;

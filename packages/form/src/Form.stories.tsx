@@ -6,7 +6,7 @@ import * as yup from 'yup';
 
 import {
 	Form,
-  TextField,
+  DJTextField,
 } from '.';
 import { string } from 'yup/lib/locale';
 
@@ -51,7 +51,7 @@ export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMes
             : yup.string().min(2, "That's too short").max(6, "That's too long"),
         })}
       >
-				<TextField
+				<DJTextField
 					name="myInput"
 					data-testid="hello-input"
 					label="Placeholder label"
@@ -63,5 +63,5 @@ export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMes
     </>
   );
 };
-Default.storyName = 'TextField';
+Default.storyName = 'DJTextField';
 
