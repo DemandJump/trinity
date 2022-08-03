@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider} from "@mui/material/styles";
+import { ThemeProvider} from "@mui/material/styles/index.js";
 import { TextField as MUITextField, InputLabel } from '@mui/material';
 import { useField } from 'formik';
-import theme from '../../theme/src';
+import theme from './theme/src';
 
 const DJTextField = ({ tag: Tag, className, onChange: propsOnChange, labelText, validate, name, required, label, helpMessage, formikProps,  ...rest }) => {
   const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] = useField(

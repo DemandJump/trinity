@@ -45,4 +45,4 @@ interface FieldProps {
 
 declare const DJTextField: (props: FieldProps) => JSX.Element;
 
-export { DJTextField, FieldProps, Form, FormProps };
+export { DJTextField, Form, FormProps };

@@ -8,7 +8,6 @@ import {
 	Form,
   DJTextField,
 } from '.';
-import { string } from 'yup/lib/locale';
 
 
 export default {
@@ -59,6 +58,7 @@ export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMes
 					disabled={disabled}
 					labelText={labelText ? "My Label" : ""}
         />
+        <input type="text" name="myInput"/>
       </Form>
     </>
   );

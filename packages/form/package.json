@@ -1,11 +1,12 @@
 {
   "name": "@demandjump/form",
-  "version": "1.0.3",
+  "version": "1.0.19",
   "description": "Demandjump React Form Components with Formik",
   "main": "index.js",
+  "module": "index.esm.js",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --loader \".js=jsx\" --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --loader \".js=jsx\" --watch --dts",
+    "dev": "tsup src/index.js --format esm,cjs --loader \".js=jsx\" --watch --dts",
     "clean": "rm -rf dist",
     "clean:nm": "rm -rf node_modules",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,12 +32,18 @@
   },
   "homepage": "https://github.com/demandjump/trinity#readme",
   "dependencies": {
+    "@emotion/react": "11.7.1",
+    "@emotion/styled": "11.6.0",
+    "@fontsource/source-sans-pro": "^4.5.10",
+    "@mui/material": "5.4.2",
+    "@mui/utils": "5.4.1",
     "formik": "^2.2.9",
     "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "latest",
+    "react-dom": "latest",
     "tsup": "^5.12.7",
     "typescript": "^4.6.4",
+    "uuid": "^8.3.2",
     "yup": "^0.32.11"
   },
   "publishConfig": {
