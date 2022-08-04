@@ -14,11 +14,11 @@ For yarn users:
 
 Then import the components like so:
 
-     import { TextField } from '@demandjump/trinity';
+     import { DJTextField } from '@demandjump/trinity';
 
      ...
 
-     <TextField name="myFieldName" id="myFieldId">
+     <DJTextField name="myFieldName" id="myFieldId">
 
      ...
 

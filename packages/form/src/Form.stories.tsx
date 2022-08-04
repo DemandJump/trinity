@@ -1,13 +1,8 @@
 /* eslint-disable no-console */
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
 import * as yup from 'yup';
-
-
-import {
-	Form,
-  DJTextField,
-} from '.';
+import { Form, DJTextField } from '.';
 
 
 export default {
@@ -35,7 +30,7 @@ export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMes
       <h2>TextField</h2>
       <Form
         onSubmit={() => {
-          console.log("submitted");
+         window.alert("Submitted.") 
         }}
         initialValues={{
           myInput: initialValue ? "Example Initial Value" : undefined,
@@ -58,7 +53,6 @@ export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMes
 					disabled={disabled}
 					labelText={labelText ? "My Label" : ""}
         />
-        <input type="text" name="myInput"/>
       </Form>
     </>
   );
