@@ -81,7 +81,8 @@
     "react-router-dom": "^6.3.0",
     "sass-loader": "^10.2.1",
     "style-loader": "^2.0.0",
-    "ts-jest": "^28.0.7"
+    "ts-jest": "^28.0.7",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@mdx-js/react": "^2.1.2",

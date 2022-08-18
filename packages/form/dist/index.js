@@ -130,11 +130,21 @@ var theme = createTheme({
 var src_default = theme;
 
 // src/DJTextField.tsx
-var DJTextField = ({ className, onChange: propsOnChange, labelText, validate, name, required, label, helpMessage, formikProps, ...rest }) => {
-  const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] = useField(
-    name
-  );
-  const htmlId = rest == null ? void 0 : rest.id;
+var DJTextField = ({
+  className,
+  onChange: propsOnChange,
+  labelText,
+  name,
+  required,
+  label,
+  helpMessage,
+  formikProps,
+  disabled,
+  id,
+  ...rest
+}) => {
+  const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] = useField(name);
+  const htmlId = id;
   const disabledHelperTextStyle = {
     color: "#9E9E9E"
   };
@@ -171,7 +181,7 @@ var DJTextField = ({ className, onChange: propsOnChange, labelText, validate, na
   return /* @__PURE__ */ React2.createElement(ThemeProvider, {
     theme: src_default
   }, /* @__PURE__ */ React2.createElement(InputLabel, {
-    style: rest.disabled ? disabledInputLabelStyle : inputLabelStyle,
+    style: disabled ? disabledInputLabelStyle : inputLabelStyle,
     shrink: true,
     htmlFor: htmlId
   }, labelText), /* @__PURE__ */ React2.createElement(MUITextField, {
@@ -181,7 +191,7 @@ var DJTextField = ({ className, onChange: propsOnChange, labelText, validate, na
     ...rest,
     InputLabelProps: {
       shrink: false,
-      style: rest.disabled ? disabledPlaceholderStyle : placeholderStyle
+      style: disabled ? disabledPlaceholderStyle : placeholderStyle
     },
     label: !metadata.touched && !field.value && label,
     className,
@@ -201,7 +211,7 @@ var DJTextField = ({ className, onChange: propsOnChange, labelText, validate, na
       }
     },
     FormHelperTextProps: {
-      style: rest.disabled ? disabledHelperTextStyle : helperTextStyle
+      style: disabled ? disabledHelperTextStyle : helperTextStyle
     },
     onBlur: () => {
       if (!metadata.touched) {
@@ -223,8 +233,7 @@ DJTextField.propTypes = {
   className: PropTypes2.string,
   name: PropTypes2.string.isRequired,
   onChange: PropTypes2.func,
-  required: PropTypes2.bool,
-  validate: PropTypes2.func
+  required: PropTypes2.bool
 };
 DJTextField.defaultProps = {
   required: false

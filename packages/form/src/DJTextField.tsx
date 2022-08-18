@@ -1,20 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ThemeProvider} from "@mui/material/styles/index.js";
-import { TextField as MUITextField, InputLabel } from '@mui/material';
-import { useField } from 'formik';
-import theme from './theme/src';
+import React from "react";
+import PropTypes from "prop-types";
+import { ThemeProvider } from "@mui/material/styles/index.js";
+import { TextField as MUITextField, InputLabel } from "@mui/material";
+import { useField } from "formik";
+import theme from "./theme/src";
+import { DJTextFieldD } from "./types";
 
-const DJTextField = ({  className, onChange: propsOnChange, labelText, validate, name, required, label, helpMessage, formikProps,  ...rest }) => {
-  const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] = useField(
-    name
-  );
+const DJTextField = ({
+  className,
+  onChange: propsOnChange,
+  labelText,
+  name,
+  required,
+  label,
+  helpMessage,
+  formikProps,
+  disabled,
+  id,
+  ...rest
+}: DJTextFieldD) => {
+  const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] =
+    useField(name);
 
-
-  const htmlId = rest?.id;
+  const htmlId = id;
   const disabledHelperTextStyle = {
     color: "#9E9E9E",
-  }
+  };
   const helperTextStyle = {
     color: metadata.error
       ? theme.palette.error.main
@@ -26,7 +37,7 @@ const DJTextField = ({  className, onChange: propsOnChange, labelText, validate,
   const inputLabelStyle = {
     color: metadata.error
       ? theme.palette.error.main
-      : theme.palette.metalgrey.main
+      : theme.palette.metalgrey.main,
   };
   const disabledPlaceholderStyle = {
     color: "#9E9E9E",
@@ -34,24 +45,28 @@ const DJTextField = ({  className, onChange: propsOnChange, labelText, validate,
   };
   const placeholderStyle = {
     color: "#56627C",
-    padding: "0px 5px"
+    padding: "0px 5px",
   };
   const rootStyle = {
-        marginTop: "8px",
-        fontSize: "16px",
-        fontWeight: 400,
-        width: "auto",
-        padding: "8px 6px",
-        "&:focus": {
-          borderColor: theme.palette.primary.main,
-        },
-        boxSizing: "border-box",
-        color: metadata.error? theme.palette.error.main : "#56627C",
-        height: "48px",
+    marginTop: "8px",
+    fontSize: "16px",
+    fontWeight: 400,
+    width: "auto",
+    padding: "8px 6px",
+    "&:focus": {
+      borderColor: theme.palette.primary.main,
+    },
+    boxSizing: "border-box",
+    color: metadata.error ? theme.palette.error.main : "#56627C",
+    height: "48px",
   };
   return (
     <ThemeProvider theme={theme}>
-      <InputLabel  style={rest.disabled ? disabledInputLabelStyle : inputLabelStyle} shrink htmlFor={htmlId}>
+      <InputLabel
+        style={disabled ? disabledInputLabelStyle : inputLabelStyle}
+        shrink
+        htmlFor={htmlId}
+      >
         {labelText}
       </InputLabel>
       <MUITextField
@@ -61,7 +76,7 @@ const DJTextField = ({  className, onChange: propsOnChange, labelText, validate,
         {...rest}
         InputLabelProps={{
           shrink: false,
-          style: rest.disabled ? disabledPlaceholderStyle : placeholderStyle,
+          style: disabled ? disabledPlaceholderStyle : placeholderStyle,
         }}
         label={!metadata.touched && !field.value && label}
         className={className}
@@ -81,7 +96,7 @@ const DJTextField = ({  className, onChange: propsOnChange, labelText, validate,
           },
         }}
         FormHelperTextProps={{
-          style: rest.disabled ? disabledHelperTextStyle : helperTextStyle,
+          style: disabled ? disabledHelperTextStyle : helperTextStyle,
         }}
         onBlur={() => {
           if (!metadata.touched) {
@@ -107,7 +122,6 @@ DJTextField.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   required: PropTypes.bool,
-  validate: PropTypes.func,
 };
 
 DJTextField.defaultProps = {
