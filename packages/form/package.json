@@ -1,6 +1,6 @@
 {
   "name": "@demandjump/form",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Demandjump React Form Components with Formik",
   "main": "dist/index.js",
   "type": "module",

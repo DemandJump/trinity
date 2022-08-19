@@ -4,7 +4,7 @@ import React from "react";
 export type DJTextFieldD = {
 	className?: string,
 	labelText?: string,
-	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
+	onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
 	name: string,
 	required?: boolean,
 	label?: string,

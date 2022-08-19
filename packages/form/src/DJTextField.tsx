@@ -1,10 +1,13 @@
-import React from "react";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import React, { CSSProperties } from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "@mui/material/styles/index.js";
 import { TextField as MUITextField, InputLabel } from "@mui/material";
 import { useField } from "formik";
 import theme from "./theme/src";
 import { DJTextFieldD } from "./types";
+import { css, jsx } from "@emotion/react";
 
 const DJTextField = ({
   className,
@@ -23,43 +26,49 @@ const DJTextField = ({
     useField(name);
 
   const htmlId = id;
-  const disabledHelperTextStyle = {
+  const disabledHelperTextStyle: CSSProperties = {
     color: "#9E9E9E",
   };
-  const helperTextStyle = {
-    color: metadata.error
-      ? theme.palette.error.main
-      : theme.palette.metalgrey.main,
+  const helperTextStyle: CSSProperties = {
+    color: metadata.error ? theme.palette.error.main : "#373F50",
   };
-  const disabledInputLabelStyle = {
+  const disabledInputLabelStyle: CSSProperties = {
     color: "#9E9E9E",
+    position: "absolute",
+    padding: "0 0 0 16px",
   };
-  const inputLabelStyle = {
-    color: metadata.error
-      ? theme.palette.error.main
-      : theme.palette.metalgrey.main,
+  const inputLabelStyle: CSSProperties = {
+    color: metadata.error ? theme.palette.error.main : "#373F50",
+    position: "absolute",
+    padding: "0 0 0 16px",
+    lineHeight: "20.11px",
   };
-  const disabledPlaceholderStyle = {
+  const disabledPlaceholderStyle: CSSProperties = {
     color: "#9E9E9E",
     padding: "0px 5px",
   };
-  const placeholderStyle = {
+  const placeholderStyle: CSSProperties = {
     color: "#56627C",
     padding: "0px 5px",
   };
-  const rootStyle = {
+  const rootStyle = css({
     marginTop: "8px",
     fontSize: "16px",
     fontWeight: 400,
     width: "auto",
-    padding: "8px 6px",
-    "&:focus": {
-      borderColor: theme.palette.primary.main,
-    },
+    padding: "8px 0px",
+    borderColor: "pink",
     boxSizing: "border-box",
     color: metadata.error ? theme.palette.error.main : "#56627C",
     height: "48px",
-  };
+    "& .MuiOutlinedInput-root": {
+      // - The Input-root, inside the TextField-root
+      "& fieldset": {
+        // - The <fieldset> inside the Input-root
+        borderColor: "#373F50", // - Set the Input border. info: https://stackoverflow.com/questions/52911169/how-to-change-the-border-color-of-mui-textfield
+      },
+    },
+  });
   return (
     <ThemeProvider theme={theme}>
       <InputLabel
@@ -70,7 +79,8 @@ const DJTextField = ({
         {labelText}
       </InputLabel>
       <MUITextField
-        style={rootStyle}
+        disabled={disabled}
+        css={rootStyle}
         id={htmlId}
         variant="outlined"
         {...rest}
@@ -88,11 +98,13 @@ const DJTextField = ({
         InputProps={{
           style: {
             color: metadata.error ? theme.palette.error.main : "#56627C",
+            borderColor: "pink !important",
           },
         }}
         inputProps={{
           style: {
             padding: "8px 16px",
+            borderColor: "pink !important",
           },
         }}
         FormHelperTextProps={{
