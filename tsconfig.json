@@ -21,6 +21,7 @@
 		"module": "ESNext",
 		"target": "ES6",
 		"jsx": "react-jsx",
+		"jsxImportSource": "@emotion/react",
 		"baseUrl": ".",
 		"paths": {
 			"@demandjump/form": [
