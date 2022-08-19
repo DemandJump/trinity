@@ -2,7 +2,7 @@
 import * as React from "react";
 import { Meta, Story } from "@storybook/react";
 import * as yup from "yup";
-import { DJForm, DJTextField } from ".";
+import { DJForm, DJTextField } from "../dist/index";
 
 export default {
   title: "Form Components/Form",

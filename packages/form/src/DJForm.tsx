@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Formik, Form as FForm, FormikProps } from "formik";
-import { uuid } from "uuidv4";
+import * as uuid from "uuid";
 import { DJFormD } from "./types";
 
 const DJForm = ({
@@ -19,7 +19,7 @@ const DJForm = ({
   children,
   ...rest
 }: DJFormD) => {
-  const formId = id || uuid();
+  const formId = id || uuid.v4();
 
   return (
     <Formik
