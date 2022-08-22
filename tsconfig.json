@@ -7,6 +7,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
 		"moduleResolution": "node",
+		"noImplicitAny": true,
 		"preserveWatchOutput": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
@@ -20,6 +21,7 @@
 		"module": "ESNext",
 		"target": "ES6",
 		"jsx": "react-jsx",
+		"jsxImportSource": "@emotion/react",
 		"baseUrl": ".",
 		"paths": {
 			"@demandjump/form": [

@@ -1,36 +1,46 @@
 /* eslint-disable no-console */
-import * as React from 'react';
-import { Meta, Story } from '@storybook/react';
-import * as yup from 'yup';
-import { Form, DJTextField } from '.';
-
+import * as React from "react";
+import { Meta, Story } from "@storybook/react";
+import * as yup from "yup";
+import { DJForm, DJTextField } from "../dist/index";
 
 export default {
-  title: 'Form Components/Form',
+  title: "Form Components/Form",
   parameters: {
     docs: {
       // page: README,
     },
   },
   args: {
-		required: false,
-		initialValue: false,
-		helpMessage: false,
-		disabled: false,
-		labelText: true,
+    required: false,
+    initialValue: false,
+    helpMessage: false,
+    disabled: false,
+    labelText: true,
   },
 } as Meta;
 
-type FormStoryProps = { required: boolean, initialValue: boolean, helpMessage: boolean, disabled: boolean, labelText: boolean};
+type FormStoryProps = {
+  required: boolean;
+  initialValue: boolean;
+  helpMessage: boolean;
+  disabled: boolean;
+  labelText: boolean;
+};
 
-export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMessage, disabled, labelText }) => {
-
-	return (
+export const Default: Story<FormStoryProps> = ({
+  required,
+  initialValue,
+  helpMessage,
+  disabled,
+  labelText,
+}) => {
+  return (
     <>
       <h2>TextField</h2>
-      <Form
+      <DJForm
         onSubmit={() => {
-         window.alert("Submitted.") 
+          window.alert("Submitted.");
         }}
         initialValues={{
           myInput: initialValue ? "Example Initial Value" : undefined,
@@ -45,17 +55,15 @@ export const Default: Story<FormStoryProps> = ({ required, initialValue, helpMes
             : yup.string().min(2, "That's too short").max(6, "That's too long"),
         })}
       >
-				<DJTextField
-					name="myInput"
-					data-testid="hello-input"
-					label="Placeholder label"
-					helpMessage={helpMessage ? "Example Help Message" : ""}
-					disabled={disabled}
-					labelText={labelText ? "My Label" : ""}
+        <DJTextField
+          name="myInput"
+          label="Placeholder label"
+          helpMessage={helpMessage ? "Example Help Message" : ""}
+          disabled={disabled}
+          labelText={labelText ? "My Label" : ""}
         />
-      </Form>
+      </DJForm>
     </>
   );
 };
-Default.storyName = 'DJTextField';
-
+Default.storyName = "DJTextField";
