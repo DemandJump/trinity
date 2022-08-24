@@ -5,7 +5,6 @@ node_modules
 # yarn 3 stuff to ignore. (We are using zero-installs)
 
 .yarn/*
-!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
