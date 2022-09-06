@@ -1,0 +1,16 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_534_972" fill="white">
+<rect x="12.5" y="18.75" width="43.75" height="50" rx="6.25"/>
+</mask>
+<rect x="12.5" y="18.75" width="43.75" height="50" rx="6.25" stroke="#373F50" stroke-width="25" stroke-linejoin="round" mask="url(#path-1-inside-1_534_972)"/>
+<mask id="path-2-inside-2_534_972" fill="white">
+<rect x="93.75" y="18.75" width="43.75" height="50" rx="6.25"/>
+</mask>
+<rect x="93.75" y="18.75" width="43.75" height="50" rx="6.25" stroke="#373F50" stroke-width="25" stroke-linejoin="round" mask="url(#path-2-inside-2_534_972)"/>
+<mask id="path-3-inside-3_534_972" fill="white">
+<rect x="93.75" y="87.5" width="43.75" height="50" rx="6.25"/>
+</mask>
+<rect x="93.75" y="87.5" width="43.75" height="50" rx="6.25" stroke="#373F50" stroke-width="25" stroke-linejoin="round" mask="url(#path-3-inside-3_534_972)"/>
+<line x1="56.25" y1="43.75" x2="93.75" y2="43.75" stroke="#373F50" stroke-width="12.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M68.75 50V112.5H75H81.25H93.75V100H81.25V50H68.75Z" fill="#373F50"/>
+</svg>
