@@ -1,0 +1,18 @@
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="0.929721" height="7.08331" rx="0.46486" transform="matrix(0.715919 -0.698183 0.695718 0.718315 6.15869 13.5933)" fill="currentColor"/>
+<rect width="0.929721" height="7.08331" rx="0.46486" transform="matrix(0.715919 -0.698183 0.695718 0.718315 5.42969 14.3296)" fill="currentColor"/>
+<mask id="path-3-inside-1_452_8937" fill="white">
+<path d="M7.5498 15.1793L9.64435 17.3271L6.78068 20.1198C6.38529 20.5054 5.75217 20.4975 5.36658 20.1021L4.66839 19.3862C4.2828 18.9908 4.29074 18.3577 4.68613 17.9721L7.5498 15.1793Z"/>
+</mask>
+<path d="M7.5498 15.1793L9.64435 17.3271L6.78068 20.1198C6.38529 20.5054 5.75217 20.4975 5.36658 20.1021L4.66839 19.3862C4.2828 18.9908 4.29074 18.3577 4.68613 17.9721L7.5498 15.1793Z" stroke="currentColor" stroke-width="3" mask="url(#path-3-inside-1_452_8937)"/>
+<path d="M8.28483 14.8351L15.443 6.08515L20.0521 5.08222L18.9339 9.66475L10.0312 16.624" stroke="currentColor" stroke-linejoin="round"/>
+<rect width="0.929721" height="7.08331" rx="0.46486" transform="matrix(-0.698435 -0.715674 0.71807 -0.695971 13.0972 18.9999)" fill="currentColor"/>
+<rect width="0.929721" height="7.08331" rx="0.46486" transform="matrix(-0.698435 -0.715674 0.71807 -0.695971 13.834 19.7288)" fill="currentColor"/>
+<mask id="path-7-inside-2_452_8937" fill="white">
+<path d="M14.6826 17.608L16.8296 15.5127L19.4459 18.1935C19.8316 18.5887 19.8239 19.2218 19.4286 19.6076L18.7129 20.306C18.3177 20.6917 17.6846 20.684 17.2988 20.2888L14.6826 17.608Z"/>
+</mask>
+<path d="M14.6826 17.608L16.8296 15.5127L19.4459 18.1935C19.8316 18.5887 19.8239 19.2218 19.4286 19.6076L18.7129 20.306C18.3177 20.6917 17.6846 20.684 17.2988 20.2888L14.6826 17.608Z" stroke="currentColor" stroke-width="3" mask="url(#path-7-inside-2_452_8937)"/>
+<path d="M8.81528 12.4027L5.58573 9.71835L4.58118 5.10956L9.1641 6.22617L11.8153 8.90268" stroke="currentColor" stroke-linejoin="round"/>
+<path d="M14.4586 17.0435L13.2368 15.8156" stroke="currentColor" stroke-linejoin="round"/>
+<path d="M16.1626 14.8957L15.1577 13.9006" stroke="currentColor" stroke-linejoin="round"/>
+</svg>
