@@ -20,13 +20,13 @@ const SvgActionBulletedList = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="M11 8h6M11 12h6M11 16h6"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />
-    <circle cx={7.5} cy={7.5} r={1.5} fill="#373F50" />
-    <circle cx={7.5} cy={11.5} r={1.5} fill="#373F50" />
-    <circle cx={7.5} cy={15.5} r={1.5} fill="#373F50" />
+    <circle cx={7.5} cy={7.5} r={1.5} fill="currentColor" />
+    <circle cx={7.5} cy={11.5} r={1.5} fill="currentColor" />
+    <circle cx={7.5} cy={15.5} r={1.5} fill="currentColor" />
   </svg>
 );
 

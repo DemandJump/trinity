@@ -27,7 +27,7 @@ const SvgIconAttribution = ({
       width={7}
       height={8}
       rx={1}
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={4}
       strokeLinejoin="round"
       mask="url(#IconAttribution_svg__a)"
@@ -41,7 +41,7 @@ const SvgIconAttribution = ({
       width={7}
       height={8}
       rx={1}
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={4}
       strokeLinejoin="round"
       mask="url(#IconAttribution_svg__b)"
@@ -55,17 +55,17 @@ const SvgIconAttribution = ({
       width={7}
       height={8}
       rx={1}
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={4}
       strokeLinejoin="round"
       mask="url(#IconAttribution_svg__c)"
     />
-    <path stroke="#373F50" strokeWidth={2} d="M9 7h6" />
+    <path stroke="currentColor" strokeWidth={2} d="M9 7h6" />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M11 8v10h4v-2h-2V8h-2Z"
-      fill="#373F50"
+      fill="currentColor"
     />
   </svg>
 );

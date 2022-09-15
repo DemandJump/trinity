@@ -92,209 +92,239 @@ declare const DJTextField: {
     };
 };
 
+interface SVGRProps$K {
+    title?: string;
+    titleId?: string;
+}
+declare const SvgActionAdd: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$K) => JSX.Element;
+
+interface SVGRProps$J {
+    title?: string;
+    titleId?: string;
+}
+declare const SvgActionArchive1: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$J) => JSX.Element;
+
+interface SVGRProps$I {
+    title?: string;
+    titleId?: string;
+}
+declare const SvgActionArchive2: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$I) => JSX.Element;
+
+interface SVGRProps$H {
+    title?: string;
+    titleId?: string;
+}
+declare const SvgActionBarchart: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$H) => JSX.Element;
+
+interface SVGRProps$G {
+    title?: string;
+    titleId?: string;
+}
+declare const SvgActionBulletedList: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$G) => JSX.Element;
+
 interface SVGRProps$F {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionAdd: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$F) => JSX.Element;
+declare const SvgActionClose: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$F) => JSX.Element;
 
 interface SVGRProps$E {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionArchive1: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$E) => JSX.Element;
+declare const SvgActionDownload: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$E) => JSX.Element;
 
 interface SVGRProps$D {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionArchive2: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$D) => JSX.Element;
+declare const SvgActionEmail: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$D) => JSX.Element;
 
 interface SVGRProps$C {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionBarchart: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$C) => JSX.Element;
+declare const SvgActionFilter1: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$C) => JSX.Element;
 
 interface SVGRProps$B {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionBulletedList: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$B) => JSX.Element;
+declare const SvgActionFilter2: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$B) => JSX.Element;
 
 interface SVGRProps$A {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionClose: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$A) => JSX.Element;
+declare const SvgActionHide: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$A) => JSX.Element;
 
 interface SVGRProps$z {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionDownload: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$z) => JSX.Element;
+declare const SvgActionMenu: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$z) => JSX.Element;
 
 interface SVGRProps$y {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionEmail: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$y) => JSX.Element;
+declare const SvgActionMore: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$y) => JSX.Element;
 
 interface SVGRProps$x {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionFilter1: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$x) => JSX.Element;
+declare const SvgActionMove: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$x) => JSX.Element;
 
 interface SVGRProps$w {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionFilter2: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$w) => JSX.Element;
+declare const SvgActionNumberedList: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$w) => JSX.Element;
 
 interface SVGRProps$v {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionHide: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$v) => JSX.Element;
+declare const SvgActionRedirectOut: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$v) => JSX.Element;
 
 interface SVGRProps$u {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionMenu: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$u) => JSX.Element;
+declare const SvgActionRefresh1: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$u) => JSX.Element;
 
 interface SVGRProps$t {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionMore: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$t) => JSX.Element;
+declare const SvgActionRefresh2: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$t) => JSX.Element;
 
 interface SVGRProps$s {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionMove: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$s) => JSX.Element;
+declare const SvgActionSearch: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$s) => JSX.Element;
 
 interface SVGRProps$r {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionNumberedList: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$r) => JSX.Element;
+declare const SvgActionShow: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$r) => JSX.Element;
 
 interface SVGRProps$q {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionRedirectOut: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$q) => JSX.Element;
+declare const SvgActionSortList: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$q) => JSX.Element;
 
 interface SVGRProps$p {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionRefresh1: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$p) => JSX.Element;
+declare const SvgActionTrash: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$p) => JSX.Element;
 
 interface SVGRProps$o {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionRefresh2: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$o) => JSX.Element;
+declare const SvgActionUpload: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$o) => JSX.Element;
 
 interface SVGRProps$n {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionSearch: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$n) => JSX.Element;
+declare const SvgDjLogoStandardSize: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$n) => JSX.Element;
 
 interface SVGRProps$m {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionShow: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$m) => JSX.Element;
+declare const SvgIconAdmin: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$m) => JSX.Element;
 
 interface SVGRProps$l {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionSortList: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$l) => JSX.Element;
+declare const SvgIconAnalytics: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$l) => JSX.Element;
 
 interface SVGRProps$k {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionTrash: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$k) => JSX.Element;
+declare const SvgIconAttribution: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$k) => JSX.Element;
 
 interface SVGRProps$j {
     title?: string;
     titleId?: string;
 }
-declare const SvgActionUpload: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$j) => JSX.Element;
+declare const SvgIconBookmark: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$j) => JSX.Element;
 
 interface SVGRProps$i {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconAdmin: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$i) => JSX.Element;
+declare const SvgIconDjUniversity: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$i) => JSX.Element;
 
 interface SVGRProps$h {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconAnalytics: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$h) => JSX.Element;
+declare const SvgIconFileTicket: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$h) => JSX.Element;
 
 interface SVGRProps$g {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconAttribution: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$g) => JSX.Element;
+declare const SvgIconHelpCenter: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$g) => JSX.Element;
 
 interface SVGRProps$f {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconBookmark: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$f) => JSX.Element;
+declare const SvgIconHelpCircle: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$f) => JSX.Element;
 
 interface SVGRProps$e {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconHelpCircle: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$e) => JSX.Element;
+declare const SvgIconHome: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$e) => JSX.Element;
 
 interface SVGRProps$d {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconHome: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$d) => JSX.Element;
+declare const SvgIconManageContent: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$d) => JSX.Element;
 
 interface SVGRProps$c {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconManageContent: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$c) => JSX.Element;
+declare const SvgIconManagePillarTopics: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$c) => JSX.Element;
 
 interface SVGRProps$b {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconManagePillarTopics: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$b) => JSX.Element;
+declare const SvgIconResearchAndDiscovery: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$b) => JSX.Element;
 
 interface SVGRProps$a {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconResearchAndDiscovery: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$a) => JSX.Element;
+declare const SvgIconSettings: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$a) => JSX.Element;
 
 interface SVGRProps$9 {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconSettings: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$9) => JSX.Element;
+declare const SvgIconTrackKeywords: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$9) => JSX.Element;
 
 interface SVGRProps$8 {
     title?: string;
     titleId?: string;
 }
-declare const SvgIconTrackKeywords: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$8) => JSX.Element;
+declare const SvgIconTrackTicket: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$8) => JSX.Element;
 
 interface SVGRProps$7 {
     title?: string;
@@ -318,7 +348,7 @@ interface SVGRProps$4 {
     title?: string;
     titleId?: string;
 }
-declare const SvgNavigationArrowLef: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$4) => JSX.Element;
+declare const SvgNavigationArrowLeft: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps$4) => JSX.Element;
 
 interface SVGRProps$3 {
     title?: string;
@@ -344,4 +374,4 @@ interface SVGRProps {
 }
 declare const SvgNavigationExpand: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => JSX.Element;
 
-export { SvgActionAdd as ActionAdd, SvgActionArchive1 as ActionArchive1, SvgActionArchive2 as ActionArchive2, SvgActionBarchart as ActionBarchart, SvgActionBulletedList as ActionBulletedList, SvgActionClose as ActionClose, SvgActionDownload as ActionDownload, SvgActionEmail as ActionEmail, SvgActionFilter1 as ActionFilter1, SvgActionFilter2 as ActionFilter2, SvgActionHide as ActionHide, SvgActionMenu as ActionMenu, SvgActionMore as ActionMore, SvgActionMove as ActionMove, SvgActionNumberedList as ActionNumberedList, SvgActionRedirectOut as ActionRedirectOut, SvgActionRefresh1 as ActionRefresh1, SvgActionRefresh2 as ActionRefresh2, SvgActionSearch as ActionSearch, SvgActionShow as ActionShow, SvgActionSortList as ActionSortList, SvgActionTrash as ActionTrash, SvgActionUpload as ActionUpload, Button, DJForm, DJTextField, SvgIconAdmin as IconAdmin, SvgIconAnalytics as IconAnalytics, SvgIconAttribution as IconAttribution, SvgIconBookmark as IconBookmark, SvgIconHelpCircle as IconHelpCircle, SvgIconHome as IconHome, SvgIconManageContent as IconManageContent, SvgIconManagePillarTopics as IconManagePillarTopics, SvgIconResearchAndDiscovery as IconResearchAndDiscovery, SvgIconSettings as IconSettings, SvgIconTrackKeywords as IconTrackKeywords, SvgIconUserProfile as IconUserProfile, Input, SvgNavigationArrowBack as NavigationArrowBack, SvgNavigationArrowDown as NavigationArrowDown, SvgNavigationArrowLef as NavigationArrowLef, SvgNavigationArrowRight as NavigationArrowRight, SvgNavigationArrowUp as NavigationArrowUp, SvgNavigationCollapse as NavigationCollapse, SvgNavigationExpand as NavigationExpand };
+export { SvgActionAdd as ActionAdd, SvgActionArchive1 as ActionArchive1, SvgActionArchive2 as ActionArchive2, SvgActionBarchart as ActionBarchart, SvgActionBulletedList as ActionBulletedList, SvgActionClose as ActionClose, SvgActionDownload as ActionDownload, SvgActionEmail as ActionEmail, SvgActionFilter1 as ActionFilter1, SvgActionFilter2 as ActionFilter2, SvgActionHide as ActionHide, SvgActionMenu as ActionMenu, SvgActionMore as ActionMore, SvgActionMove as ActionMove, SvgActionNumberedList as ActionNumberedList, SvgActionRedirectOut as ActionRedirectOut, SvgActionRefresh1 as ActionRefresh1, SvgActionRefresh2 as ActionRefresh2, SvgActionSearch as ActionSearch, SvgActionShow as ActionShow, SvgActionSortList as ActionSortList, SvgActionTrash as ActionTrash, SvgActionUpload as ActionUpload, Button, DJForm, DJTextField, SvgDjLogoStandardSize as DjLogoStandardSize, SvgIconAdmin as IconAdmin, SvgIconAnalytics as IconAnalytics, SvgIconAttribution as IconAttribution, SvgIconBookmark as IconBookmark, SvgIconDjUniversity as IconDjUniversity, SvgIconFileTicket as IconFileTicket, SvgIconHelpCenter as IconHelpCenter, SvgIconHelpCircle as IconHelpCircle, SvgIconHome as IconHome, SvgIconManageContent as IconManageContent, SvgIconManagePillarTopics as IconManagePillarTopics, SvgIconResearchAndDiscovery as IconResearchAndDiscovery, SvgIconSettings as IconSettings, SvgIconTrackKeywords as IconTrackKeywords, SvgIconTrackTicket as IconTrackTicket, SvgIconUserProfile as IconUserProfile, Input, SvgNavigationArrowBack as NavigationArrowBack, SvgNavigationArrowDown as NavigationArrowDown, SvgNavigationArrowLeft as NavigationArrowLeft, SvgNavigationArrowRight as NavigationArrowRight, SvgNavigationArrowUp as NavigationArrowUp, SvgNavigationCollapse as NavigationCollapse, SvgNavigationExpand as NavigationExpand };

@@ -20,7 +20,7 @@ const SvgActionFilter2 = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="M12.015 7h8M4.015 7h4M17.015 17h3M4.015 17h8"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />
@@ -29,7 +29,7 @@ const SvgActionFilter2 = ({
       cy={7}
       r={2}
       transform="rotate(90 10.015 7)"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />
@@ -38,7 +38,7 @@ const SvgActionFilter2 = ({
       cy={17}
       r={2}
       transform="rotate(90 15.015 17)"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />

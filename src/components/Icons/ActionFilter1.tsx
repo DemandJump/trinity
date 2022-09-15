@@ -37,7 +37,7 @@ const SvgActionFilter1 = ({
       />
     </mask>
     <g mask="url(#ActionFilter1_svg__a)">
-      <path fill="#373F50" d="M.016 0h24v24h-24z" />
+      <path fill="currentColor" d="M.016 0h24v24h-24z" />
     </g>
   </svg>
 );

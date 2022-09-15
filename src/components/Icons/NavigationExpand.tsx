@@ -20,7 +20,7 @@ const SvgNavigationExpand = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <g
       clipPath="url(#NavigationExpand_svg__a)"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     >

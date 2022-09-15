@@ -24,12 +24,12 @@ const SvgActionEmail = ({
       width={16}
       height={12}
       rx={2}
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
     />
     <path
       d="m4 9 7.106 3.553a2 2 0 0 0 1.788 0L20 9"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
     />
   </svg>

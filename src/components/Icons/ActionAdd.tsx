@@ -12,7 +12,7 @@ const SvgActionAdd = ({
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     viewBox="0 0 25 24"
-    fill="none"
+    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}
@@ -20,7 +20,7 @@ const SvgActionAdd = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="M12.016 6v12M18.016 12h-12"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />

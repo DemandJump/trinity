@@ -20,7 +20,7 @@ const SvgNavigationArrowRight = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="m11 9 3 3M11 15l3-3"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />

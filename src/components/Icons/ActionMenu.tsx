@@ -20,7 +20,7 @@ const SvgActionMenu = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="M5.016 7h14M5.016 12h14M5.016 17h14"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />

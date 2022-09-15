@@ -20,7 +20,7 @@ const SvgNavigationCollapse = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <g
       clipPath="url(#NavigationCollapse_svg__a)"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     >
