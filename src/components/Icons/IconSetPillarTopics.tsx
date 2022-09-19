@@ -5,7 +5,7 @@ interface SVGRProps {
   titleId?: string;
 }
 
-const SvgIconAttribution = ({
+const SvgIconSetPillarTopics = ({
   title,
   titleId,
   ...props
@@ -19,12 +19,19 @@ const SvgIconAttribution = ({
   >
     {title ? <title id={titleId}>{title}</title> : null}
     <path
-      d="m8 16-4-4M8 8l-4 4M16 8l4 4M16 16l4-4"
+      d="M5 3h14M5 21h14"
       stroke="#373F50"
-      strokeWidth={2.667}
+      strokeWidth={2}
+      strokeLinecap="round"
+    />
+    <path d="M6 5.118h12M6 18.882h12" stroke="#373F50" strokeLinecap="round" />
+    <path
+      d="M9 7.235v9.53M15 7.235v9.53M12 7.235v9.53"
+      stroke="#373F50"
+      strokeWidth={2}
       strokeLinecap="round"
     />
   </svg>
 );
 
-export default SvgIconAttribution;
+export default SvgIconSetPillarTopics;
