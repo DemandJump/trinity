@@ -1,0 +1,21 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="16.1213" cy="3.12134" r="1.5" transform="rotate(-45 16.1213 3.12134)" fill="currentColor" />
+	<circle cx="8.12132" cy="3.12134" r="1.5" transform="rotate(-45 8.12132 3.12134)" fill="currentColor" />
+	<circle r="1.45679" transform="matrix(0.685491 -0.728081 0.685491 0.728081 3.99723 8.12134)" fill="currentColor" />
+	<circle r="1.45679" transform="matrix(0.685491 -0.728081 0.685491 0.728081 20.0031 8.12134)" fill="currentColor" />
+	<circle r="1.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 16.1211 20.1214)" fill="currentColor" />
+	<circle r="1.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 8.12109 20.1214)" fill="currentColor" />
+	<circle r="1.49104" transform="matrix(0.70283 -0.711357 -0.70283 -0.711357 4.0957 15.1214)" fill="currentColor" />
+	<circle r="1.49104" transform="matrix(0.70283 -0.711357 -0.70283 -0.711357 20.0957 15.1214)" fill="currentColor" />
+	<path
+		d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+		stroke="currentColor" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round" />
+	<path d="M10.5 8.5L8.5 4" stroke="currentColor" stroke-linecap="round" />
+	<path d="M13 9L16 3.5" stroke="currentColor" stroke-linecap="round" />
+	<path d="M9 10L4.5 8.5" stroke="currentColor" stroke-linecap="round" />
+	<path d="M14.5 10.5L19.5 8.5" stroke="currentColor" stroke-linecap="round" />
+	<path d="M10.5 14.5L8.5 19.5" stroke="currentColor" stroke-linecap="round" />
+	<path d="M4 15L9 13" stroke="currentColor" stroke-linecap="round" />
+	<path d="M13.5 14.5L16 20" stroke="currentColor" stroke-linecap="round" />
+	<path d="M15 13L20 15" stroke="currentColor" stroke-linecap="round" />
+</svg>
