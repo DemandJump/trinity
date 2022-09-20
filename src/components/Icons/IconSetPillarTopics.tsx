@@ -20,14 +20,18 @@ const SvgIconSetPillarTopics = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="M5 3h14M5 21h14"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />
-    <path d="M6 5.118h12M6 18.882h12" stroke="#373F50" strokeLinecap="round" />
+    <path
+      d="M6 5.118h12M6 18.882h12"
+      stroke="currentColor"
+      strokeLinecap="round"
+    />
     <path
       d="M9 7.235v9.53M15 7.235v9.53M12 7.235v9.53"
-      stroke="#373F50"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
     />
