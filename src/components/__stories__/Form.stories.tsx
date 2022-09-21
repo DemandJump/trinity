@@ -2,7 +2,8 @@
 import * as React from "react";
 import { Meta, Story } from "@storybook/react";
 import * as yup from "yup";
-import { DJForm, DJTextField } from "../../";
+import { DJForm, DJTextField } from "../../index";
+import ActionSearch from "../../components/Icons/ActionSearch";
 
 export default {
   title: "Form Components/Form",
@@ -17,6 +18,7 @@ export default {
     helpMessage: false,
     disabled: false,
     labelText: true,
+    iconBefore: false,
   },
 } as Meta;
 
@@ -26,6 +28,7 @@ type FormStoryProps = {
   helpMessage: boolean;
   disabled: boolean;
   labelText: boolean;
+  iconBefore: boolean;
 };
 
 export const Default: Story<FormStoryProps> = ({
@@ -34,6 +37,7 @@ export const Default: Story<FormStoryProps> = ({
   helpMessage,
   disabled,
   labelText,
+  iconBefore,
 }) => {
   return (
     <>
@@ -61,6 +65,7 @@ export const Default: Story<FormStoryProps> = ({
           helpMessage={helpMessage ? "Example Help Message" : ""}
           disabled={disabled}
           labelText={labelText ? "My Label" : ""}
+          iconBefore={iconBefore && <ActionSearch style={{ width: "24px" }} />}
         />
       </DJForm>
     </>

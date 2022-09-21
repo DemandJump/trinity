@@ -3,12 +3,15 @@
 import React, { CSSProperties } from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "@mui/material/styles/index.js";
-import { TextField as MUITextField, InputLabel } from "@mui/material";
+import {
+  TextField as MUITextField,
+  InputLabel,
+  InputAdornment,
+} from "@mui/material";
 import { useField } from "formik";
 import theme from "./theme";
 import { DJTextFieldD } from "./types";
 import { css, jsx } from "@emotion/react";
-
 const DJTextField = ({
   className,
   onChange: propsOnChange,
@@ -20,6 +23,7 @@ const DJTextField = ({
   formikProps,
   disabled,
   id,
+  iconBefore,
   ...rest
 }: DJTextFieldD) => {
   const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] =
@@ -45,17 +49,16 @@ const DJTextField = ({
   };
   const disabledPlaceholderStyle: CSSProperties = {
     color: "#9E9E9E",
-    padding: "0px 5px",
   };
   const placeholderStyle: CSSProperties = {
     color: "#56627C",
-    padding: "0px 5px",
+    marginLeft: iconBefore ? "24px" : "0px",
   };
   const rootStyle = css({
     marginTop: "8px",
     fontSize: "16px",
     fontWeight: 400,
-    width: "auto",
+    width: "100%",
     padding: "8px 0px",
     borderColor: "pink",
     boxSizing: "border-box",
@@ -100,10 +103,13 @@ const DJTextField = ({
             color: metadata.error ? theme.palette.error.main : "#56627C",
             borderColor: "pink !important",
           },
+          startAdornment: iconBefore && (
+            <InputAdornment position="start">{iconBefore}</InputAdornment>
+          ),
         }}
         inputProps={{
           style: {
-            padding: "8px 16px",
+            padding: iconBefore ? "8px 0px" : "8px 16px",
             borderColor: "pink !important",
           },
         }}
