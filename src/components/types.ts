@@ -12,6 +12,7 @@ export type DJTextFieldD = {
 	formikProps?: FormikProps<any>,
 	disabled?: boolean,
 	id?: string,
+	iconBefore?: JSX.Element,
 	rest?: any,
 };
 

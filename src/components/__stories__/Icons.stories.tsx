@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AnalyticsSml } from "../Icons";
+import { IconAdmin } from "../Icons";
 import { Meta, Story } from "@storybook/react";
 
 export default {
@@ -17,7 +17,7 @@ export const Default: Story = () => {
   return (
     <>
       <h2>Icons</h2>
-      <AnalyticsSml />
+      <IconAdmin />
     </>
   );
 };
