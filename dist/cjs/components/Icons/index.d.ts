@@ -9,6 +9,7 @@ export { default as ActionEmail } from "./ActionEmail";
 export { default as ActionFilter1 } from "./ActionFilter1";
 export { default as ActionFilter2 } from "./ActionFilter2";
 export { default as ActionHide } from "./ActionHide";
+export { default as ActionInfo } from "./ActionInfo";
 export { default as ActionMenu } from "./ActionMenu";
 export { default as ActionMore } from "./ActionMore";
 export { default as ActionMove } from "./ActionMove";

@@ -19,6 +19,7 @@ export { default as ActionEmail } from "./components/Icons/ActionEmail";
 export { default as ActionFilter1 } from "./components/Icons/ActionFilter1";
 export { default as ActionFilter2 } from "./components/Icons/ActionFilter2";
 export { default as ActionHide } from "./components/Icons/ActionHide";
+export { default as ActionInfo } from "./components/Icons/ActionInfo";
 export { default as ActionMenu } from "./components/Icons/ActionMenu";
 export { default as ActionMore } from "./components/Icons/ActionMore";
 export { default as ActionMove } from "./components/Icons/ActionMove";
