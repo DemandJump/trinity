@@ -40,6 +40,7 @@ export { default as IconKeywordList } from "./IconKeywordList";
 export { default as IconKeywords } from "./IconKeywords";
 export { default as IconManageContent } from "./IconManageContent";
 export { default as IconManagePillarTopics } from "./IconManagePillarTopics";
+export { default as IconPrimaryDomain } from "./IconPrimaryDomain";
 export { default as IconResearchAndDiscovery } from "./IconResearchAndDiscovery";
 export { default as IconSetPillarTopics } from "./IconSetPillarTopics";
 export { default as IconSettings } from "./IconSettings";

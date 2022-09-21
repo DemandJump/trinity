@@ -12,7 +12,7 @@ const SvgIconGroups = ({
 }: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}
