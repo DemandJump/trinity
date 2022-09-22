@@ -24,6 +24,7 @@ const DJTextField = ({
   disabled,
   id,
   iconBefore,
+  type,
   ...rest
 }: DJTextFieldD) => {
   const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] =
@@ -82,6 +83,7 @@ const DJTextField = ({
         {labelText}
       </InputLabel>
       <MUITextField
+        type={type}
         disabled={disabled}
         css={rootStyle}
         id={htmlId}
