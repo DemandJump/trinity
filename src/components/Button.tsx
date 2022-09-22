@@ -19,7 +19,7 @@ const StyledButton = styled.button<ButtonProps>`
       : props.size === "medium"
       ? "9px 30px 11px"
       : "14px 30px 16px"};
-  color: "#ffffff";
+  color: #ffffff;
   background-color: ${(props) => (props.primary ? theme.palette.primary.main : "#1b116e")};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   &:hover {

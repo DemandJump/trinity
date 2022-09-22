@@ -60,7 +60,7 @@ function(e,t){const n=ln(e,t);return"production"!==process.env.NODE_ENV?(...t)=>
   border-radius: 3px;
   display: inline-block;
   padding: ${e=>"small"===e.size?"7px 25px 8px":"medium"===e.size?"9px 30px 11px":"14px 30px 16px"};
-  color: "#ffffff";
+  color: #ffffff;
   background-color: ${e=>e.primary?ds.palette.primary.main:"#1b116e"};
   opacity: ${e=>e.disabled?.5:1};
   &:hover {
