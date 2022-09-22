@@ -10,11 +10,13 @@ interface ButtonProps {
     disabled?: boolean;
     size?: "small" | "medium" | "large";
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    type?: "button" | "submit" | "reset";
 }
 
 declare const Button: React.FC<ButtonProps>;
 
 interface InputProps {
+    type?: "text" | "password" | "email";
     id?: string;
     label?: string;
     error?: boolean;
@@ -38,6 +40,7 @@ declare type DJTextFieldD = {
     formikProps?: FormikProps<any>;
     disabled?: boolean;
     id?: string;
+    iconBefore?: JSX.Element;
     rest?: any;
 };
 declare type DJFormD = {
@@ -80,7 +83,7 @@ declare const DJForm: {
 };
 
 declare const DJTextField: {
-    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, ...rest }: DJTextFieldD): jsx.JSX.Element;
+    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, iconBefore, ...rest }: DJTextFieldD): jsx.JSX.Element;
     propTypes: {
         className: PropTypes.Requireable<string>;
         name: PropTypes.Validator<string>;

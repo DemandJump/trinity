@@ -36,7 +36,9 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
+
 const Button: React.FC<ButtonProps> = ({text, primary, disabled, size, onClick, type = "button", ...props }) => {
+
   return (
     <StyledButton
       type={type}
