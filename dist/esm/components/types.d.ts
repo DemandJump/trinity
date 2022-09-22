@@ -12,6 +12,7 @@ export declare type DJTextFieldD = {
     disabled?: boolean;
     id?: string;
     iconBefore?: JSX.Element;
+    type: "text" | "password" | "email";
     rest?: any;
 };
 export declare type DJFormD = {

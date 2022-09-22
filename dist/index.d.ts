@@ -41,8 +41,8 @@ declare type DJTextFieldD = {
     disabled?: boolean;
     id?: string;
     iconBefore?: JSX.Element;
+    type: "text" | "password" | "email";
     rest?: any;
-    type: "text"|"password"|"email"
 };
 declare type DJFormD = {
     initialValues: FormikValues;
@@ -90,7 +90,6 @@ declare const DJTextField: {
         name: PropTypes.Validator<string>;
         onChange: PropTypes.Requireable<(...args: any[]) => any>;
         required: PropTypes.Requireable<boolean>;
-        type: PropTypes.Validator<string>;
     };
     defaultProps: {
         required: boolean;
