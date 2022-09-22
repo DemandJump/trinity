@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { DJTextFieldD } from "./types";
 import { jsx } from "@emotion/react";
 declare const DJTextField: {
-    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, ...rest }: DJTextFieldD): jsx.JSX.Element;
+    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, iconBefore, ...rest }: DJTextFieldD): jsx.JSX.Element;
     propTypes: {
         className: PropTypes.Requireable<string>;
         name: PropTypes.Validator<string>;

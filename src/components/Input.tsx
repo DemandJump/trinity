@@ -41,6 +41,7 @@ const Input: React.FC<InputProps> = ({
   disabled,
   placeholder,
   onChange,
+  type="text",
   ...props
 }) => {
   return (
@@ -52,7 +53,7 @@ const Input: React.FC<InputProps> = ({
       </StyledLabel>
       <StyledInput
         id={id}
-        type="text"
+        type={type}
         onChange={onChange}
         disabled={disabled}
         error={error}
