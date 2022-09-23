@@ -65,7 +65,9 @@ export const Default: Story<FormStoryProps> = ({
           helpMessage={helpMessage ? "Example Help Message" : ""}
           disabled={disabled}
           labelText={labelText ? "My Label" : ""}
-          iconBefore={iconBefore && <ActionSearch style={{ width: "24px" }} />}
+          iconBefore={
+            iconBefore ? <ActionSearch style={{ width: "24px" }} /> : <></>
+          }
         />
       </DJForm>
     </>
