@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import { SxProps } from '@mui/system';
 export interface ButtonProps {
   text?: string;
   variant?: 'contained'
@@ -11,6 +12,7 @@ export interface ButtonProps {
   | 'error'
   | 'info'
   | 'warning';
+  sx?: SxProps;
   disabled?: boolean;
   size?: "small" | "medium" | "large";
   onClick?: MouseEventHandler<HTMLButtonElement>;
