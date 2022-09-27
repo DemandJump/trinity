@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { ThemeProvider } from "@mui/material/styles/index.js";
+import { makeStyles, ThemeProvider } from "@mui/material/styles/index.js";
 import theme from "./theme";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -27,6 +27,17 @@ interface MaterialUISelectFieldProps extends FieldInputProps<string> {
   required: boolean;
 }
 
+// const useStyles = makeStyles((theme) => ({
+//   rootFirstSelect: {
+//     padding: "4px 0px",
+//   },
+//   rootSecondSelect: {
+//     padding: "10px 80px",
+//   },
+// }));
+
+// const classes = useStyles();
+
 const MaterialUISelectField: React.FC<MaterialUISelectFieldProps> = ({
   errorString,
   children,
@@ -39,12 +50,19 @@ const MaterialUISelectField: React.FC<MaterialUISelectFieldProps> = ({
   return (
     <FormControl fullWidth>
       <Select
+        sx={{
+          "& .MuiSelect-outlined": {
+            padding: "12px",
+          },
+        }}
         displayEmpty
         renderValue={(value) => value !== "" && value}
         name={name}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
+        inputProps={{ padding: 0 }}
+        outlined
       >
         {children}
       </Select>
@@ -69,7 +87,7 @@ const DJSelectField: React.FC<FormikSelectProps> = ({
         {items.map((item) => (
           <MenuItem key={item.value} value={item.label}>
             <ListItemText>{item.label}</ListItemText>
-            <ListItemIcon>{item.menuItemIcon}</ListItemIcon>
+            {item.menuItemIcon}
           </MenuItem>
         ))}
       </Field>

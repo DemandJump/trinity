@@ -34,12 +34,17 @@ type FormStoryProps = {
 
 const menuOptions = [
   {
-    menuItemIcon: <ActionTrash />,
+    menuItemIcon: (
+      <ActionTrash
+        style={{ width: "24px" }}
+        onClick={() => console.log("clicked")}
+      />
+    ),
     label: "Topics Last Quarter",
     value: "hi.com",
   },
   {
-    menuItemIcon: <ActionTrash />,
+    menuItemIcon: <ActionTrash style={{ width: "24px" }} />,
     label: "Keyword Performance",
     value: "hello.com",
   },
