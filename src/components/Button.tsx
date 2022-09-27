@@ -11,6 +11,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   color,
   size,
+  sx,
   type = "button",
   ...props
 }) => {
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
         disabled={disabled}
         onClick={onClick}
         size={size}
+        sx={sx}
         {...props}
       >
         {text}

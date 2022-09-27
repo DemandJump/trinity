@@ -2,8 +2,9 @@
 import * as React from "react";
 import { Meta, Story } from "@storybook/react";
 import * as yup from "yup";
-import { DJForm, DJTextField } from "../../index";
+import { DJForm, DJTextField, DJSelectField } from "../../index";
 import ActionSearch from "../../components/Icons/ActionSearch";
+import ActionTrash from "../../components/Icons/ActionTrash";
 
 export default {
   title: "Form Components/Form",
@@ -30,6 +31,19 @@ type FormStoryProps = {
   labelText: boolean;
   iconBefore: boolean;
 };
+
+const menuOptions = [
+  {
+    menuItemIcon: <ActionTrash />,
+    label: "Topics Last Quarter",
+    value: "hi.com",
+  },
+  {
+    menuItemIcon: <ActionTrash />,
+    label: "Keyword Performance",
+    value: "hello.com",
+  },
+];
 
 export const Default: Story<FormStoryProps> = ({
   required,
@@ -59,18 +73,48 @@ export const Default: Story<FormStoryProps> = ({
             : yup.string().min(2, "That's too short").max(6, "That's too long"),
         })}
       >
-        <DJTextField
-          name="myInput"
-          label="Placeholder label"
-          helpMessage={helpMessage ? "Example Help Message" : ""}
-          disabled={disabled}
-          labelText={labelText ? "My Label" : ""}
-          iconBefore={
-            iconBefore ? <ActionSearch style={{ width: "24px" }} /> : <></>
-          }
-        />
+        <div style={{ padding: "30px" }}>
+          <DJTextField
+            name="myInput"
+            label="Placeholder label"
+            helpMessage={helpMessage ? "Example Help Message" : ""}
+            disabled={disabled}
+            labelText={labelText ? "My Label" : ""}
+            iconBefore={
+              iconBefore ? <ActionSearch style={{ width: "24px" }} /> : <></>
+            }
+          />
+        </div>
       </DJForm>
     </>
   );
 };
 Default.storyName = "DJTextField";
+
+export const Select: Story<FormStoryProps> = ({
+  required,
+  initialValue,
+  helpMessage,
+  disabled,
+  labelText,
+  iconBefore,
+}) => {
+  return (
+    <>
+      <h2>DJSelectField</h2>
+      <DJForm
+        onSubmit={() => {
+          window.alert("Submitted.");
+        }}
+        initialValues={{
+          mySelect: "Example text",
+        }}
+      >
+        <div style={{ padding: "30px" }}>
+          <DJSelectField name="mySelect" items={menuOptions}></DJSelectField>
+        </div>
+      </DJForm>
+    </>
+  );
+};
+Select.storyName = "DJSelectField";
