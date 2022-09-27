@@ -52,7 +52,6 @@ const MaterialUISelectField: React.FC<MaterialUISelectFieldProps> = ({
         onBlur={onBlur}
         value={value}
         inputProps={{ padding: 0 }}
-        outlined
       >
         {children}
       </Select>
@@ -79,7 +78,7 @@ const DJSelectField: React.FC<FormikSelectProps> = ({
           onChange={onChange}
         >
           {items.map((item) => (
-            <MenuItem key={item.value} value={item.label}>
+            <MenuItem key={item.value} value={item.value}>
               <ListItemText>{item.label}</ListItemText>
               {item.menuItemIcon}
             </MenuItem>
