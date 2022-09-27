@@ -19,6 +19,7 @@ interface FormikSelectProps {
   name: string;
   items: FormikSelectItem[];
   required?: boolean;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface MaterialUISelectFieldProps extends FieldInputProps<string> {
@@ -26,17 +27,6 @@ interface MaterialUISelectFieldProps extends FieldInputProps<string> {
   children: ReactNode;
   required: boolean;
 }
-
-// const useStyles = makeStyles((theme) => ({
-//   rootFirstSelect: {
-//     padding: "4px 0px",
-//   },
-//   rootSecondSelect: {
-//     padding: "10px 80px",
-//   },
-// }));
-
-// const classes = useStyles();
 
 const MaterialUISelectField: React.FC<MaterialUISelectFieldProps> = ({
   errorString,
@@ -66,6 +56,7 @@ const MaterialUISelectField: React.FC<MaterialUISelectFieldProps> = ({
       >
         {children}
       </Select>
+
       <FormHelperText>{errorString}</FormHelperText>
     </FormControl>
   );
@@ -75,22 +66,40 @@ const DJSelectField: React.FC<FormikSelectProps> = ({
   name,
   items,
   required = false,
+  onChange,
 }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Field
-        name={name}
-        as={MaterialUISelectField}
-        errorString={<ErrorMessage name={name} />}
-        required={required}
-      >
-        {items.map((item) => (
-          <MenuItem key={item.value} value={item.label}>
-            <ListItemText>{item.label}</ListItemText>
-            {item.menuItemIcon}
-          </MenuItem>
-        ))}
-      </Field>
+      {onChange ? (
+        <Field
+          name={name}
+          as={MaterialUISelectField}
+          errorString={<ErrorMessage name={name} />}
+          required={required}
+          onChange={onChange}
+        >
+          {items.map((item) => (
+            <MenuItem key={item.value} value={item.label}>
+              <ListItemText>{item.label}</ListItemText>
+              {item.menuItemIcon}
+            </MenuItem>
+          ))}
+        </Field>
+      ) : (
+        <Field
+          name={name}
+          as={MaterialUISelectField}
+          errorString={<ErrorMessage name={name} />}
+          required={required}
+        >
+          {items.map((item) => (
+            <MenuItem key={item.value} value={item.label}>
+              <ListItemText>{item.label}</ListItemText>
+              {item.menuItemIcon}
+            </MenuItem>
+          ))}
+        </Field>
+      )}
     </ThemeProvider>
   );
 };
