@@ -34,12 +34,17 @@ type FormStoryProps = {
 
 const menuOptions = [
   {
-    menuItemIcon: <ActionTrash />,
+    menuItemIcon: (
+      <ActionTrash
+        style={{ width: "24px" }}
+        onClick={() => console.log("clicked")}
+      />
+    ),
     label: "Topics Last Quarter",
     value: "hi.com",
   },
   {
-    menuItemIcon: <ActionTrash />,
+    menuItemIcon: <ActionTrash style={{ width: "24px" }} />,
     label: "Keyword Performance",
     value: "hello.com",
   },
@@ -91,6 +96,10 @@ export const Default: Story<FormStoryProps> = ({
 };
 Default.storyName = "DJTextField";
 
+const handleChange = (e) => {
+  console.log("e.target", e.target);
+};
+
 export const Select: Story<FormStoryProps> = ({
   required,
   initialValue,
@@ -111,7 +120,11 @@ export const Select: Story<FormStoryProps> = ({
         }}
       >
         <div style={{ padding: "30px" }}>
-          <DJSelectField name="mySelect" items={menuOptions}></DJSelectField>
+          <DJSelectField
+            name="mySelect"
+            items={menuOptions}
+            // onChange={handleChange}
+          ></DJSelectField>
         </div>
       </DJForm>
     </>

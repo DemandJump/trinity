@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { ThemeProvider } from "@mui/material/styles/index.js";
+import { makeStyles, ThemeProvider } from "@mui/material/styles/index.js";
 import theme from "./theme";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -19,6 +19,7 @@ interface FormikSelectProps {
   name: string;
   items: FormikSelectItem[];
   required?: boolean;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface MaterialUISelectFieldProps extends FieldInputProps<string> {
@@ -39,15 +40,22 @@ const MaterialUISelectField: React.FC<MaterialUISelectFieldProps> = ({
   return (
     <FormControl fullWidth>
       <Select
+        sx={{
+          "& .MuiSelect-outlined": {
+            padding: "12px",
+          },
+        }}
         displayEmpty
         renderValue={(value) => value !== "" && value}
         name={name}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
+        inputProps={{ padding: 0 }}
       >
         {children}
       </Select>
+
       <FormHelperText>{errorString}</FormHelperText>
     </FormControl>
   );
@@ -57,22 +65,40 @@ const DJSelectField: React.FC<FormikSelectProps> = ({
   name,
   items,
   required = false,
+  onChange,
 }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Field
-        name={name}
-        as={MaterialUISelectField}
-        errorString={<ErrorMessage name={name} />}
-        required={required}
-      >
-        {items.map((item) => (
-          <MenuItem key={item.value} value={item.label}>
-            <ListItemText>{item.label}</ListItemText>
-            <ListItemIcon>{item.menuItemIcon}</ListItemIcon>
-          </MenuItem>
-        ))}
-      </Field>
+      {onChange ? (
+        <Field
+          name={name}
+          as={MaterialUISelectField}
+          errorString={<ErrorMessage name={name} />}
+          required={required}
+          onChange={onChange}
+        >
+          {items.map((item) => (
+            <MenuItem key={item.value} value={item.value}>
+              <ListItemText>{item.label}</ListItemText>
+              {item.menuItemIcon}
+            </MenuItem>
+          ))}
+        </Field>
+      ) : (
+        <Field
+          name={name}
+          as={MaterialUISelectField}
+          errorString={<ErrorMessage name={name} />}
+          required={required}
+        >
+          {items.map((item) => (
+            <MenuItem key={item.value} value={item.label}>
+              <ListItemText>{item.label}</ListItemText>
+              {item.menuItemIcon}
+            </MenuItem>
+          ))}
+        </Field>
+      )}
     </ThemeProvider>
   );
 };
