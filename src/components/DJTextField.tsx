@@ -93,6 +93,7 @@ const DJTextField = ({
         InputLabelProps={{
           shrink: false,
           style: disabled ? disabledPlaceholderStyle : placeholderStyle,
+          required: false,
         }}
         label={!metadata.touched && !field.value && label}
         className={className}
