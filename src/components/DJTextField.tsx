@@ -79,6 +79,7 @@ const DJTextField = ({
         style={disabled ? disabledInputLabelStyle : inputLabelStyle}
         shrink
         htmlFor={htmlId}
+        required={false}
       >
         {labelText}
       </InputLabel>
