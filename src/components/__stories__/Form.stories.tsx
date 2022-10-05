@@ -49,6 +49,9 @@ const menuOptions = [
     value: "hello.com",
   },
 ];
+const handleSubmit = (values) => {
+  console.log(values.myInput);
+};
 
 export const Default: Story<FormStoryProps> = ({
   required,
@@ -62,9 +65,7 @@ export const Default: Story<FormStoryProps> = ({
     <>
       <h2>TextField</h2>
       <DJForm
-        onSubmit={() => {
-          window.alert("Submitted.");
-        }}
+        onSubmit={handleSubmit}
         initialValues={{
           myInput: initialValue ? "Example Initial Value" : undefined,
         }}
@@ -80,6 +81,7 @@ export const Default: Story<FormStoryProps> = ({
       >
         <div style={{ padding: "30px" }}>
           <DJTextField
+            type="text"
             name="myInput"
             label="Placeholder label"
             helpMessage={helpMessage ? "Example Help Message" : ""}
@@ -123,7 +125,7 @@ export const Select: Story<FormStoryProps> = ({
           <DJSelectField
             name="mySelect"
             items={menuOptions}
-            // onChange={handleChange}
+            onChange={handleChange}
           ></DJSelectField>
         </div>
       </DJForm>

@@ -17,8 +17,5 @@ declare const DJForm: {
         validate: PropTypes.Requireable<(...args: any[]) => any>;
         validationSchema: PropTypes.Requireable<object>;
     };
-    defaultProps: {
-        onSubmit: () => void;
-    };
 };
 export default DJForm;

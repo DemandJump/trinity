@@ -59,8 +59,4 @@ DJForm.propTypes = {
   validationSchema: PropTypes.object,
 };
 
-DJForm.defaultProps = {
-  onSubmit: () => {},
-};
-
 export default DJForm;
