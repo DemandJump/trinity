@@ -47,10 +47,11 @@ declare type DJTextFieldD = {
     type: "text" | "password" | "email";
     rest?: any;
 };
+declare type FormikSubmitHandler<V> = (value: V, formikHelpers: FormikHelpers<V>) => void;
 declare type DJFormD = {
     initialValues: FormikValues;
     enableReinitialize?: boolean;
-    onSubmit: (values: object, formikHelpers: FormikHelpers<object>) => void;
+    onSubmit: FormikSubmitHandler<any>;
     initialStatus?: string;
     initialErrors?: object;
     initialTouched?: object;

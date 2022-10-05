@@ -17,10 +17,12 @@ export type DJTextFieldD = {
 	rest?: any,
 };
 
+type FormikSubmitHandler<V> = (value: V, formikHelpers: FormikHelpers<V>) => void;
+
 export type DJFormD = {
 	initialValues: FormikValues,
-  enableReinitialize?: boolean;
-  onSubmit: (values: object, formikHelpers: FormikHelpers<object>) => void
+	enableReinitialize?: boolean;
+	onSubmit: FormikSubmitHandler<any>;
   initialStatus?: string;
   initialErrors?: object;
   initialTouched?: object;
