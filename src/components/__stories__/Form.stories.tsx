@@ -118,7 +118,7 @@ export const Select: Story<FormStoryProps> = ({
           window.alert("Submitted.");
         }}
         initialValues={{
-          mySelect: "Example text",
+          mySelect: "",
         }}
       >
         <div style={{ padding: "30px" }}>
@@ -126,6 +126,7 @@ export const Select: Story<FormStoryProps> = ({
             name="mySelect"
             items={menuOptions}
             onChange={handleChange}
+            placeholder="Select an Option"
           ></DJSelectField>
         </div>
       </DJForm>

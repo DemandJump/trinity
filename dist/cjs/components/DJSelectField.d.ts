@@ -9,6 +9,7 @@ interface FormikSelectProps {
     items: FormikSelectItem[];
     required?: boolean;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
 }
 declare const DJSelectField: React.FC<FormikSelectProps>;
 export default DJSelectField;
