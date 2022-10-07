@@ -125,7 +125,7 @@ export const Select: Story<FormStoryProps> = ({
           <DJSelectField
             name="mySelect"
             items={menuOptions}
-            onChange={handleChange}
+            // onChange={handleChange}
             placeholder="Select an Option"
           ></DJSelectField>
         </div>

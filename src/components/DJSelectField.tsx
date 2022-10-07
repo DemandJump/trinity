@@ -75,21 +75,38 @@ const DJSelectField: React.FC<FormikSelectProps> = ({
 }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Field
-        name={name}
-        as={MaterialUISelectField}
-        errorString={<ErrorMessage name={name} />}
-        required={required}
-        placeholder={placeholder}
-        onChange={onChange}
-      >
-        {items.map((item) => (
-          <MenuItem key={item.value} value={item.label}>
-            <ListItemText>{item.label}</ListItemText>
-            {item.menuItemIcon}
-          </MenuItem>
-        ))}
-      </Field>
+      {onChange ? (
+        <Field
+          name={name}
+          as={MaterialUISelectField}
+          errorString={<ErrorMessage name={name} />}
+          required={required}
+          placeholder={placeholder}
+          onChange={onChange}
+        >
+          {items.map((item) => (
+            <MenuItem key={item.value} value={item.label}>
+              <ListItemText>{item.label}</ListItemText>
+              {item.menuItemIcon}
+            </MenuItem>
+          ))}
+        </Field>
+      ) : (
+        <Field
+          name={name}
+          as={MaterialUISelectField}
+          errorString={<ErrorMessage name={name} />}
+          required={required}
+          placeholder={placeholder}
+        >
+          {items.map((item) => (
+            <MenuItem key={item.value} value={item.label}>
+              <ListItemText>{item.label}</ListItemText>
+              {item.menuItemIcon}
+            </MenuItem>
+          ))}
+        </Field>
+      )}
     </ThemeProvider>
   );
 };
