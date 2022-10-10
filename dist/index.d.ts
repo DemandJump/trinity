@@ -111,6 +111,22 @@ interface FormikSelectProps {
 }
 declare const DJSelectField: React.FC<FormikSelectProps>;
 
+interface languageSelectProps {
+    parentCallback(res: object): any;
+    language: {
+        value: string;
+        label: string;
+    };
+}
+declare const LanguageSelect: {
+    ({ parentCallback, language }: languageSelectProps): JSX.Element;
+    propTypes: {
+        parentCallback: PropTypes.Requireable<(...args: any[]) => any>;
+        language: PropTypes.Requireable<object>;
+    };
+    defaultProps: {};
+};
+
 interface SVGRProps$Z {
     title?: string;
     titleId?: string;
@@ -483,4 +499,4 @@ interface SVGRProps {
 }
 declare const SvgNavigationExpand: ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => JSX.Element;
 
-export { SvgActionAdd as ActionAdd, SvgActionArchive1 as ActionArchive1, SvgActionArchive2 as ActionArchive2, SvgActionBarchart as ActionBarchart, SvgActionBulletedList as ActionBulletedList, SvgActionClose as ActionClose, SvgActionDownload as ActionDownload, SvgActionEmail as ActionEmail, SvgActionFilter1 as ActionFilter1, SvgActionFilter2 as ActionFilter2, SvgActionHide as ActionHide, SvgActionInfo as ActionInfo, SvgActionMenu as ActionMenu, SvgActionMore as ActionMore, SvgActionMove as ActionMove, SvgActionNumberedList as ActionNumberedList, SvgActionRedirectOut as ActionRedirectOut, SvgActionRefresh1 as ActionRefresh1, SvgActionRefresh2 as ActionRefresh2, SvgActionSearch as ActionSearch, SvgActionShow as ActionShow, SvgActionSortList as ActionSortList, SvgActionTrash as ActionTrash, SvgActionUpload as ActionUpload, Button, DJForm, DJSelectField, DJTextField, SvgDjLogoStandardSize as DjLogoStandardSize, SvgIconAdmin as IconAdmin, SvgIconAnalytics as IconAnalytics, SvgIconAttribution as IconAttribution, SvgIconBookmark as IconBookmark, SvgIconCompetitors as IconCompetitors, SvgIconCompetitorsSwords as IconCompetitorsSwords, SvgIconComplete as IconComplete, SvgIconConnectors as IconConnectors, SvgIconDjUniversity as IconDjUniversity, SvgIconError as IconError, SvgIconFileTicket as IconFileTicket, SvgIconGroups as IconGroups, SvgIconHelpCenter as IconHelpCenter, SvgIconHelpCircle as IconHelpCircle, SvgIconHome as IconHome, SvgIconKeywordList as IconKeywordList, SvgIconKeywords as IconKeywords, SvgIconManageContent as IconManageContent, SvgIconManagePillarTopics as IconManagePillarTopics, SvgIconPrimaryDomain as IconPrimaryDomain, SvgIconResearchAndDiscovery as IconResearchAndDiscovery, SvgIconSetPillarTopics as IconSetPillarTopics, SvgIconSettings as IconSettings, SvgIconSinglePillar as IconSinglePillar, SvgIconSubscription as IconSubscription, SvgIconSupport as IconSupport, SvgIconTrackKeywords as IconTrackKeywords, SvgIconTrackTicket as IconTrackTicket, SvgIconUserProfile as IconUserProfile, SvgIconUsers as IconUsers, Input, SvgNavigationArrowBack as NavigationArrowBack, SvgNavigationArrowDown as NavigationArrowDown, SvgNavigationArrowLeft as NavigationArrowLeft, SvgNavigationArrowRight as NavigationArrowRight, SvgNavigationArrowUp as NavigationArrowUp, SvgNavigationCollapse as NavigationCollapse, SvgNavigationExpand as NavigationExpand };
+export { SvgActionAdd as ActionAdd, SvgActionArchive1 as ActionArchive1, SvgActionArchive2 as ActionArchive2, SvgActionBarchart as ActionBarchart, SvgActionBulletedList as ActionBulletedList, SvgActionClose as ActionClose, SvgActionDownload as ActionDownload, SvgActionEmail as ActionEmail, SvgActionFilter1 as ActionFilter1, SvgActionFilter2 as ActionFilter2, SvgActionHide as ActionHide, SvgActionInfo as ActionInfo, SvgActionMenu as ActionMenu, SvgActionMore as ActionMore, SvgActionMove as ActionMove, SvgActionNumberedList as ActionNumberedList, SvgActionRedirectOut as ActionRedirectOut, SvgActionRefresh1 as ActionRefresh1, SvgActionRefresh2 as ActionRefresh2, SvgActionSearch as ActionSearch, SvgActionShow as ActionShow, SvgActionSortList as ActionSortList, SvgActionTrash as ActionTrash, SvgActionUpload as ActionUpload, Button, DJForm, DJSelectField, DJTextField, SvgDjLogoStandardSize as DjLogoStandardSize, SvgIconAdmin as IconAdmin, SvgIconAnalytics as IconAnalytics, SvgIconAttribution as IconAttribution, SvgIconBookmark as IconBookmark, SvgIconCompetitors as IconCompetitors, SvgIconCompetitorsSwords as IconCompetitorsSwords, SvgIconComplete as IconComplete, SvgIconConnectors as IconConnectors, SvgIconDjUniversity as IconDjUniversity, SvgIconError as IconError, SvgIconFileTicket as IconFileTicket, SvgIconGroups as IconGroups, SvgIconHelpCenter as IconHelpCenter, SvgIconHelpCircle as IconHelpCircle, SvgIconHome as IconHome, SvgIconKeywordList as IconKeywordList, SvgIconKeywords as IconKeywords, SvgIconManageContent as IconManageContent, SvgIconManagePillarTopics as IconManagePillarTopics, SvgIconPrimaryDomain as IconPrimaryDomain, SvgIconResearchAndDiscovery as IconResearchAndDiscovery, SvgIconSetPillarTopics as IconSetPillarTopics, SvgIconSettings as IconSettings, SvgIconSinglePillar as IconSinglePillar, SvgIconSubscription as IconSubscription, SvgIconSupport as IconSupport, SvgIconTrackKeywords as IconTrackKeywords, SvgIconTrackTicket as IconTrackTicket, SvgIconUserProfile as IconUserProfile, SvgIconUsers as IconUsers, Input, LanguageSelect, SvgNavigationArrowBack as NavigationArrowBack, SvgNavigationArrowDown as NavigationArrowDown, SvgNavigationArrowLeft as NavigationArrowLeft, SvgNavigationArrowRight as NavigationArrowRight, SvgNavigationArrowUp as NavigationArrowUp, SvgNavigationCollapse as NavigationCollapse, SvgNavigationExpand as NavigationExpand };
