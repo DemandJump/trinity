@@ -1,6 +1,6 @@
 {
   "name": "@demandjump/trinity",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "description": "Public Demandjump React Components and UIKit",
   "repository": {
     "type": "git",
@@ -66,8 +66,8 @@
     "postcss-modules": "^4.3.1",
     "prettier": "^2.6.2",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^latest",
+    "react-dom": "latest",
     "react-router-dom": "^6.3.0",
     "react-select": "^5.4.0",
     "yup": "^0.32.11"
@@ -90,8 +90,8 @@
     "@storybook/testing-library": "^0.0.13",
     "@svgr/cli": "^6.3.1",
     "@types/node": "^14.18.17",
-    "@types/react": "18.0.17",
-    "@types/react-dom": "^18.0.6",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "@types/styled-components": "^5.1.19",
     "@types/uuid": "^8.3.4",
     "babel-loader": "^8.2.3",

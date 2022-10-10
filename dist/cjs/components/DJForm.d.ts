@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import PropTypes from "prop-types";
 import { DJFormD } from "./types";
 declare const DJForm: {

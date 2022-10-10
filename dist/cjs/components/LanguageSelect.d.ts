@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import PropTypes from "prop-types";
 interface languageSelectProps {
     parentCallback(res: object): any;

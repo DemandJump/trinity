@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React, { MouseEventHandler, ChangeEventHandler, SVGProps } from 'react';
 import { SxProps } from '@mui/system';
 import PropTypes from 'prop-types';
