@@ -3,12 +3,14 @@ import Input from "./components/Input";
 import DJForm from "./components/DJForm";
 import DJTextField from "./components/DJTextField";
 import DJSelectField from "./components/DJSelectField";
+import LanguageSelect from "./components/LanguageSelect";
 
 export { Button };
 export { Input };
 export { DJForm };
 export { DJTextField };
 export { DJSelectField };
+export {LanguageSelect};
 
 export { default as ActionAdd } from "./components/Icons/ActionAdd";
 export { default as ActionArchive1 } from "./components/Icons/ActionArchive1";
