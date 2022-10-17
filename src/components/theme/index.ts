@@ -11,25 +11,18 @@ const theme = createTheme({
     secondary: {
       main: '#2ABBFF',
     },
+    success: {
+      main: "#44AF69"
+    },
     error: {
       main: '#B00020',
     },
-    // metalgrey: defaultTheme.palette.augmentColor({
-    //   color: {
-    //     main: '#373F50',
-    //   },
-    // }),
-    // disabled: defaultTheme.palette.augmentColor({
-    //   color: {
-    //     main: "#909BB3"
-    //   }
-    // }),
-    // augmentColor is a step that Material-UI automatically does for the standard palette colors.
-    // tertiary: defaultTheme.palette.augmentColor({
-    //   color: { main: lime[500] },
-    //   name: "tertiary"
-    // })
-
+    info: {
+      main: "#FFA400"
+    },
+    warning: {
+      main: "#FE4A49"
+    }
   }, typography: {
     fontFamily: [
       'Source Sans Pro'
