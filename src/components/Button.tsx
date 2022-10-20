@@ -15,9 +15,6 @@ const StyledButton = styled(MuiButton)<ButtonProps>(({ theme, color }) => ({
   textAlign: "center",
   letterSpacing: "0.0125em",
   textTransform: "capitalize",
-  "&:hover": {
-    boxShadow: "0px 4px 8px rgba(55, 63, 80, 0.25)",
-  },
   "& .MuiButton-sizeSmall": {
     fontSize: "14px",
     lineHeight: "18px",
@@ -38,12 +35,22 @@ const StyledButton = styled(MuiButton)<ButtonProps>(({ theme, color }) => ({
     gap: "10px",
     borderRadius: "3px",
   },
-  "&:active": {
-    "&.MuiButton-containedPrimary": {
-      backgroundColor: "#2ABBFF",
+  "&.MuiButton-containedPrimary": {
+    "&:hover": {
+      boxShadow: "0px 4px 8px rgba(55, 63, 80, 0.25)",
+      backgroundColor: theme.palette.primary.main,
+      "&:active": {
+        backgroundColor: theme.palette.secondary.main,
+      },
     },
-    "&.MuiButton-containedSecondary": {
-      backgroundColor: "#2ABBFF",
+  },
+  "&.MuiButton-outlinedPrimary": {
+    "&:hover": {
+      boxShadow: "0px 4px 8px rgba(55, 63, 80, 0.25)",
+      borderColor: theme.palette.secondary.main,
+      "&:active": {
+        borderColor: "#2ABBFF",
+      },
     },
   },
 }));
