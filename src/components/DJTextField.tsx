@@ -25,9 +25,6 @@ const DJTextField = ({
   id,
   iconBefore,
   type,
-  ref,
-  autoComplete,
-  autoFocus,
   placeholder,
   ...rest
 }: DJTextFieldD) => {
@@ -79,7 +76,7 @@ const DJTextField = ({
   });
   return (
     <ThemeProvider theme={theme}>
-      {label && 
+      {label && labelText &&
         <InputLabel
           style={disabled ? disabledInputLabelStyle : inputLabelStyle}
           shrink
@@ -94,8 +91,6 @@ const DJTextField = ({
         disabled={disabled}
         css={rootStyle}
         id={htmlId}
-        ref={ref}
-        autoComplete={autoComplete}
         variant="outlined"
         {...rest}
         InputLabelProps={{
@@ -111,7 +106,6 @@ const DJTextField = ({
         value={field.value}
         error={!!metadata.error}
         helperText={metadata.error || helpMessage}
-        autoFocus={autoFocus}
         InputProps={{
           style: {
             color: metadata.error ? theme.palette.error.main : "#56627C",
@@ -126,7 +120,6 @@ const DJTextField = ({
             padding: iconBefore ? "8px 0px" : "8px 16px",
             borderColor: "pink !important",
           },
-          autoComplete:{autoComplete}
         }}
         FormHelperTextProps={{
           style: disabled ? disabledHelperTextStyle : helperTextStyle,
