@@ -25,6 +25,7 @@ const DJTextField = ({
   id,
   iconBefore,
   type,
+  ref,
   ...rest
 }: DJTextFieldD) => {
   const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] =
@@ -88,6 +89,7 @@ const DJTextField = ({
         disabled={disabled}
         css={rootStyle}
         id={htmlId}
+        ref={ref}
         variant="outlined"
         {...rest}
         InputLabelProps={{

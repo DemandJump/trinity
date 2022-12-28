@@ -1,5 +1,5 @@
 import { FormikProps, FormikValues, FormikHelpers } from "formik";
-import React from "react";
+import React, { RefObject } from "react";
 export declare type DJTextFieldD = {
     className?: string;
     labelText?: string;
@@ -13,6 +13,7 @@ export declare type DJTextFieldD = {
     id?: string;
     iconBefore?: JSX.Element;
     type: "text" | "password" | "email";
+    ref?: ((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null | undefined;
     rest?: any;
 };
 declare type FormikSubmitHandler<V> = (value: V, formikHelpers: FormikHelpers<V>) => void;

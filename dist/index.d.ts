@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ChangeEventHandler, SVGProps } from 'react';
+import React, { MouseEventHandler, ChangeEventHandler, RefObject, SVGProps } from 'react';
 import { SxProps } from '@mui/system';
 import PropTypes from 'prop-types';
 import { FormikProps, FormikValues, FormikHelpers } from 'formik';
@@ -44,6 +44,7 @@ declare type DJTextFieldD = {
     id?: string;
     iconBefore?: JSX.Element;
     type: "text" | "password" | "email";
+    ref?: ((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null | undefined;
     rest?: any;
 };
 declare type FormikSubmitHandler<V> = (value: V, formikHelpers: FormikHelpers<V>) => void;
@@ -84,7 +85,7 @@ declare const DJForm: {
 };
 
 declare const DJTextField: {
-    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, iconBefore, type, ...rest }: DJTextFieldD): jsx.JSX.Element;
+    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, iconBefore, type, ref, ...rest }: DJTextFieldD): jsx.JSX.Element;
     propTypes: {
         className: PropTypes.Requireable<string>;
         name: PropTypes.Validator<string>;
