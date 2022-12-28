@@ -67,6 +67,7 @@ const DJTextField = ({
     color: metadata.error ? theme.palette.error.main : "#56627C",
     height: "48px",
     "& .MuiOutlinedInput-root": {
+      '& legend': !label ? { display: 'none' }: {},
       // - The Input-root, inside the TextField-root
       "& fieldset": {
         // - The <fieldset> inside the Input-root
