@@ -71,6 +71,7 @@ const DJTextField = ({
       // - The Input-root, inside the TextField-root
       "& fieldset": {
         // - The <fieldset> inside the Input-root
+        top: 0,
         borderColor: "#373F50", // - Set the Input border. info: https://stackoverflow.com/questions/52911169/how-to-change-the-border-color-of-mui-textfield
       },
     },
