@@ -79,14 +79,16 @@ const DJTextField = ({
   });
   return (
     <ThemeProvider theme={theme}>
-      <InputLabel
-        style={disabled ? disabledInputLabelStyle : inputLabelStyle}
-        shrink
-        htmlFor={htmlId}
-        required={false}
-      >
-        {labelText}
-      </InputLabel>
+      {label && 
+        <InputLabel
+          style={disabled ? disabledInputLabelStyle : inputLabelStyle}
+          shrink
+          htmlFor={htmlId}
+          required={false}
+        >
+          {labelText}
+        </InputLabel>
+      }
       <MUITextField
         type={type}
         disabled={disabled}
