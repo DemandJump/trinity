@@ -15,6 +15,7 @@ export declare type DJTextFieldD = {
     type: "text" | "password" | "email";
     ref?: ((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null | undefined;
     autoComplete?: string;
+    autoFocus?: boolean;
     rest?: any;
 };
 declare type FormikSubmitHandler<V> = (value: V, formikHelpers: FormikHelpers<V>) => void;

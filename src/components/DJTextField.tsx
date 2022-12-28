@@ -27,6 +27,7 @@ const DJTextField = ({
   type,
   ref,
   autoComplete,
+  autoFocus,
   ...rest
 }: DJTextFieldD) => {
   const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] =
@@ -106,6 +107,7 @@ const DJTextField = ({
         value={field.value}
         error={!!metadata.error}
         helperText={metadata.error || helpMessage}
+        autoFocus={autoFocus}
         InputProps={{
           style: {
             color: metadata.error ? theme.palette.error.main : "#56627C",
@@ -120,6 +122,7 @@ const DJTextField = ({
             padding: iconBefore ? "8px 0px" : "8px 16px",
             borderColor: "pink !important",
           },
+          autoComplete:{autoComplete}
         }}
         FormHelperTextProps={{
           style: disabled ? disabledHelperTextStyle : helperTextStyle,
