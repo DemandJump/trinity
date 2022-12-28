@@ -50,6 +50,7 @@ const DJTextField = ({
     position: "absolute",
     padding: "0 0 0 16px",
     lineHeight: "20.11px",
+    top: '-20px',
   };
   const disabledPlaceholderStyle: CSSProperties = {
     color: "#9E9E9E",
