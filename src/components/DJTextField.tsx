@@ -50,7 +50,6 @@ const DJTextField = ({
     position: "absolute",
     padding: "0 0 0 16px",
     lineHeight: "20.11px",
-    top: '-20px',
   };
   const disabledPlaceholderStyle: CSSProperties = {
     color: "#9E9E9E",
@@ -80,7 +79,7 @@ const DJTextField = ({
   return (
     <ThemeProvider theme={theme}>
       <InputLabel
-        style={disabled ? disabledInputLabelStyle : inputLabelStyle}
+        // style={disabled ? disabledInputLabelStyle : inputLabelStyle}
         shrink
         htmlFor={htmlId}
         required={false}
@@ -102,6 +101,7 @@ const DJTextField = ({
           required: false,
         }}
         label={!metadata.touched && !field.value && label}
+        placeholder={label}
         className={className}
         name={name}
         required={required}
