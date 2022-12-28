@@ -80,7 +80,7 @@ const DJTextField = ({
   return (
     <ThemeProvider theme={theme}>
       <InputLabel
-        // style={disabled ? disabledInputLabelStyle : inputLabelStyle}
+        style={disabled ? disabledInputLabelStyle : inputLabelStyle}
         shrink
         htmlFor={htmlId}
         required={false}
