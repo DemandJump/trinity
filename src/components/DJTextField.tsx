@@ -28,6 +28,7 @@ const DJTextField = ({
   ref,
   autoComplete,
   autoFocus,
+  placeholder,
   ...rest
 }: DJTextFieldD) => {
   const [{ onChange: useFieldOnChange, ...field }, metadata, helpers] =
@@ -101,7 +102,7 @@ const DJTextField = ({
           required: false,
         }}
         label={!metadata.touched && !field.value && label}
-        placeholder={label}
+        placeholder={placeholder}
         className={className}
         name={name}
         required={required}

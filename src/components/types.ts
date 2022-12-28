@@ -17,6 +17,7 @@ export type DJTextFieldD = {
 	ref?: ((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null | undefined,
 	autoComplete?: string,
 	autoFocus?: boolean,
+	placeholder?: string,
 	rest?: any,
 };
 

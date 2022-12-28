@@ -47,6 +47,7 @@ declare type DJTextFieldD = {
     ref?: ((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null | undefined;
     autoComplete?: string;
     autoFocus?: boolean;
+    placeholder?: string;
     rest?: any;
 };
 declare type FormikSubmitHandler<V> = (value: V, formikHelpers: FormikHelpers<V>) => void;
@@ -87,7 +88,7 @@ declare const DJForm: {
 };
 
 declare const DJTextField: {
-    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, iconBefore, type, ref, autoComplete, autoFocus, ...rest }: DJTextFieldD): jsx.JSX.Element;
+    ({ className, onChange: propsOnChange, labelText, name, required, label, helpMessage, formikProps, disabled, id, iconBefore, type, ref, autoComplete, autoFocus, placeholder, ...rest }: DJTextFieldD): jsx.JSX.Element;
     propTypes: {
         className: PropTypes.Requireable<string>;
         name: PropTypes.Validator<string>;
