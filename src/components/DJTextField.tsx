@@ -96,7 +96,7 @@ const DJTextField = ({
         variant="outlined"
         {...rest}
         InputLabelProps={{
-          shrink: true,
+          shrink: false,
           style: disabled ? disabledPlaceholderStyle : placeholderStyle,
           required: false,
         }}
