@@ -14,6 +14,7 @@ export declare type DJTextFieldD = {
     iconBefore?: JSX.Element;
     type: "text" | "password" | "email";
     ref?: ((instance: HTMLDivElement | null) => void) | RefObject<HTMLDivElement> | null | undefined;
+    autoComplete: string;
     rest?: any;
 };
 declare type FormikSubmitHandler<V> = (value: V, formikHelpers: FormikHelpers<V>) => void;
