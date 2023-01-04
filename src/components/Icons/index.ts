@@ -32,6 +32,7 @@ export { default as IconCompetitorsSwords } from "./IconCompetitorsSwords";
 export { default as IconComplete } from "./IconComplete";
 export { default as IconConnectors } from "./IconConnectors";
 export { default as IconDjUniversity } from "./IconDjUniversity";
+export { default as IconEdit } from "./IconEdit";
 export { default as IconError } from "./IconError";
 export { default as IconFileTicket } from "./IconFileTicket";
 export { default as IconGroups } from "./IconGroups";

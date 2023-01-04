@@ -44,6 +44,7 @@ export { default as IconCompetitorsSwords } from "./components/Icons/IconCompeti
 export { default as IconComplete } from "./components/Icons/IconComplete";
 export { default as IconConnectors } from "./components/Icons/IconConnectors";
 export { default as IconDjUniversity } from "./components/Icons/IconDjUniversity";
+export { default as IconEdit } from "./components/Icons/IconEdit";
 export { default as IconError } from "./components/Icons/IconError";
 export { default as IconFileTicket } from "./components/Icons/IconFileTicket";
 export { default as IconGroups } from "./components/Icons/IconGroups";
